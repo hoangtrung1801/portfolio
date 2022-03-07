@@ -1,0 +1,11 @@
+.menu-bar-active i:nth-child(2) {
+    opacity: 0 !important;
+}
+
+.menu-bar-active i:nth-child(1) {
+    transform: translate(0, 10px) rotate(45deg) scale(1.5) !important;
+}
+
+.menu-bar-active i:nth-child(3) {
+    transform: translate(0, -10px) rotate(-45deg) scale(1.5) !important;
+}
