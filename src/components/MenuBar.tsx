@@ -4,7 +4,7 @@ import React, { MouseEventHandler } from 'react';
 // function MenuBar({activeNav, toggleNav}) {
 const MenuBar = ({activeNav = false, toggleNav}: {activeNav: boolean, toggleNav: MouseEventHandler<HTMLDivElement>}): JSX.Element => {
   return (
-    <Box className={activeNav ? 'menu-bar-active' : ''} onClick={toggleNav} position="absolute" top="35px" right="35px" zIndex="1002" cursor="pointer" padding="5px 4px" background="transparent" overflow="hidden" sx={{
+    <Box className={activeNav ? 'menu-bar-active' : ''} onClick={toggleNav} position="fixed" top="35px" right="35px" zIndex="1002" cursor="pointer" padding="5px 4px" background="transparent" overflow="hidden" sx={{
       '& i': {
         display: 'block',
         width: '42px',

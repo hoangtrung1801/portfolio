@@ -1,13 +1,12 @@
-import { extendTheme } from '@chakra-ui/react';
+import { ComponentStyleConfig, extendTheme } from '@chakra-ui/react';
+
+const Heading: ComponentStyleConfig = {
+  baseStyle: {
+    marginBottom: '12px'
+  }
+}
 
 const theme = extendTheme({
-  // styles: {
-  //   global: {
-  //     'html, body': {
-  //       fontFamily: 'san-serif'
-  //     }
-  //   }
-  // }
   fonts: {
     heading: "Rubik, san-serif",
     // body: "Montserrat san-serif"
@@ -19,6 +18,9 @@ const theme = extendTheme({
       dark: "#9a9a9a",
       light: "#cacaca"
     }
+  },
+  components: {
+    Heading
   }
 })
 
