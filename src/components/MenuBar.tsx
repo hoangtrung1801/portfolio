@@ -26,11 +26,6 @@ const MenuBar = ({activeNav = false, toggleNav}: {activeNav: boolean, toggleNav:
       <Box as="i"></Box>
       <Box as="i"></Box>
     </Box>
-    // <div className={`menu-bar ${activeNav ? "menu-bar-active" : ""}`} onClick={toggleNav}>
-    //   <i></i>
-    //   <i></i>
-    //   <i></i>
-    // </div>
   )
 }
 

@@ -1,14 +1,17 @@
-import { Container, Box, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
+import { Container, Flex, Heading, SimpleGrid } from "@chakra-ui/react";
 import React from "react";
 import ProjectItem from "../components/ProjectItem";
 import NormalText from "../components/Text/NormalText";
+import projects from "../constants/projects";
 
 const ListProjects: React.FunctionComponent = () => {
   return (
-    <SimpleGrid columns={2}>
-      <Box padding="10px">
-        <ProjectItem />
-      </Box>
+    <SimpleGrid columns={2} columnGap='24px' rowGap='32px' mt='32px'>
+      {
+        projects.map(( project, id ) => (
+          <ProjectItem project={project} />
+        ))
+      }
     </SimpleGrid>
   );
 };
@@ -17,11 +20,15 @@ const Projects: React.FunctionComponent = () => {
   return (
     <Flex
       width="100vw"
-      height="100vh"
+      minH='100vh'
+      p='80px 0 60px'
+
       align="center"
-      justify="center"
+      justify="flex-start"
       direction="column"
+
       bgColor="bgDefault"
+      
     >
       <Container maxW="container.md">
         <Heading color="textDefault.light">my projects</Heading>

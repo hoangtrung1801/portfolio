@@ -1,10 +1,12 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box, BoxProps, Text } from "@chakra-ui/react";
 import React from "react";
 
-const Skill: React.FunctionComponent<{children: React.ReactNode}> = ({children}) => {
+const Skill: React.FunctionComponent<BoxProps> = ({children, ...props}) => {
   return (
     <Box
       display="inline-block"
+      m="3px"
+
       padding="8px 5px"
       bgColor="#313131"
       color="#999"
@@ -12,15 +14,19 @@ const Skill: React.FunctionComponent<{children: React.ReactNode}> = ({children})
       borderStyle="solid"
       borderColor={"#222"}
       borderRadius="3px"
+
       textTransform={"uppercase"}
       fontWeight="bold"
       fontSize={".75em"}
       lineHeight="1em"
+
       boxShadow={"1px 1px 0 rgb(0 0 0 / 25%)"}
-      m="3px"
       cursor={"pointer"}
       position="relative"
       overflow="hidden"
+
+      {...props}
+
       _before={{
         content: `""`,
         top: "0",

@@ -1,3 +1,8 @@
+body {
+    overflow-x: hidden;
+    background-color: #2f2f2f;
+}
+
 .menu-bar-active i:nth-child(2) {
     opacity: 0 !important;
 }
