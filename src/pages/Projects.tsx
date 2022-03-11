@@ -6,7 +6,7 @@ import projects from "../constants/projects";
 
 const ListProjects: React.FunctionComponent = () => {
   return (
-    <SimpleGrid columns={2} columnGap='24px' rowGap='32px' mt='32px'>
+    <SimpleGrid columns={2} columnGap='32px' rowGap='48px' mt='32px'>
       {
         projects.map(( project, id ) => (
           <ProjectItem project={project} />
@@ -19,6 +19,7 @@ const ListProjects: React.FunctionComponent = () => {
 const Projects: React.FunctionComponent = () => {
   return (
     <Flex
+      id='projects'
       width="100vw"
       minH='100vh'
       p='80px 0 60px'

@@ -1,0 +1,25 @@
+const skills = [
+  "javascript",
+  "nodejs",
+  "html5",
+  "css",
+  "sass",
+  "reactjs",
+  "redux",
+  "sass",
+  "expressjs",
+  "redux",
+  "pug",
+  'typescript',
+  'chakra ui',
+  'electron.js',
+  "mongodb",
+  "redis",
+  "chakra UI",
+  "mysql",
+  "c++",
+  "python",
+  "java",
+];
+
+export default skills;

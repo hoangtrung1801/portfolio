@@ -47,7 +47,7 @@ const ProjectItem: React.FunctionComponent<{project: Project} & BoxProps> = ({pr
         <Box
           className="main"
           position="relative"
-          pt="58%"
+          pt="60%"
           width="100%"
           _before={{
             content: `''`,

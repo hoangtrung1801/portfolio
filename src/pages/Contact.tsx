@@ -50,6 +50,7 @@ const StyledInput: React.FunctionComponent<
 const Contact: React.FunctionComponent = () => {
   return (
     <Flex
+      id='contact'
       width="100vw"
       minH="100vh"
       p="80px 0 60px"
@@ -79,7 +80,7 @@ const Contact: React.FunctionComponent = () => {
           <StyledInput logo={UserLogo} placeholder="Fill with your name" />
           <StyledInput logo={EmailLogo} placeholder="Fill with your email" />
           <HStack>
-            <StyledButton>Submit your message</StyledButton>
+            <StyledButton disabled={true}>Submit your message</StyledButton>
           </HStack>
         </Stack>
 

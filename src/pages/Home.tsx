@@ -8,6 +8,7 @@ import Skill from "../components/Skill";
 import Social from "../components/Social";
 import HighLightText from "../components/Text/HighlightText";
 import NormalText from "../components/Text/NormalText";
+import skills from "../constants/skillks";
 
 
 
@@ -17,35 +18,18 @@ const Introduction: React.FC = () => (
     <Heading as="h1" color="textDefault.light">
       Hello, my name is Trung
     </Heading>
-    <NormalText>
+    <NormalText textAlign='center'>
       I am a <HighLightText>full-stack web developer</HighLightText>
     </NormalText>
-    <NormalText>
+    <NormalText textAlign='center'>
       Contact with me via{" "}
       <HighLightText>hoangtrung1801.2003@gmail.com</HighLightText>
     </NormalText>
-    <NormalText>Here are some technologies I've been working:</NormalText>
+    <NormalText textAlign='center'>Here are some technologies I've been working:</NormalText>
   </>
 );
 
 const Skills: React.FunctionComponent = () => {
-  const skills = [
-    "javascript",
-    "nodejs",
-    "java",
-    "html5",
-    "css",
-    "sass",
-    "reactjs",
-    "mongodb",
-    "redis",
-    "mysql",
-    "expressjs",
-    "redux",
-    "c++",
-    "python",
-  ];
-
   return (
     <Box mt="6px" textAlign="center">
       {skills.map((skill, id) => (
@@ -58,6 +42,7 @@ const Skills: React.FunctionComponent = () => {
 const Home: React.FC = () => {
   return (
     <Flex
+      id='about'
       width="100vw"
       height="100vh"
       align="center"

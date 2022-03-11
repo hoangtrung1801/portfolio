@@ -1,4 +1,4 @@
-import { Box, Image, ImageProps } from "@chakra-ui/react";
+import { Box, ImageProps } from "@chakra-ui/react";
 import React from "react";
 
 const FacebookIcon: React.FunctionComponent<ImageProps> = ({...props}) => {
