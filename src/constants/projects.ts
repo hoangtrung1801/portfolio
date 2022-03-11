@@ -9,6 +9,7 @@ const projects: Project[] = [
   {
     title: 'portfolio',
     image: portfolio,
+    href: 'https://github.com/hoangtrung1801/portfolio',
     skills: [
       'react', 'chakra ui', 'typescript', 'animation'
     ]
@@ -16,6 +17,7 @@ const projects: Project[] = [
   {
     title: 'FoodEnjoy',
     image: foodenjoy,
+    href: 'https://github.com/hoangtrung1801/foodenjoy',
     skills: [
       'node.js', 'express.js', 'pug', 'css'
     ]
@@ -23,6 +25,7 @@ const projects: Project[] = [
   {
     title: 'notebook',
     image: notebook,
+    href: 'https://github.com/hoangtrung1801/Notebook-app',
     skills: [
       'react', 'redux', 'styled components', 'css'
     ]
@@ -30,6 +33,7 @@ const projects: Project[] = [
   {
     title: 'croma hospital api',
     image: cromahospital,
+    href: 'https://github.com/hoangtrung1801/croma-hospital-api',
     skills: [
       'node.js', 'express.js', 'mongodb', 'mongoose', 'redis', 'data structure & algorithm'
     ]
@@ -37,6 +41,7 @@ const projects: Project[] = [
   {
     title: 'online shopping system',
     image: onlineshoppingsystem,
+    href: 'https://github.com/hoangtrung1801/online-shopping-system-java',
     skills: [
       'java', 'sql server', 'javafx'
     ]

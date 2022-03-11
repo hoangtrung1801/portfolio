@@ -13,7 +13,8 @@ const ProjectItem: React.FunctionComponent<{project: Project} & BoxProps> = ({pr
   return (
     <Box as={LinkBox} boxShadow="8px 8px 0 rgb(0 0 0 / 15%)" overflow="hidden">
       <LinkOverlay
-        href="#"
+        href={project.href}
+        target="_blank"
         _hover={{
           "& .main::after": {
             opacity: "1",
