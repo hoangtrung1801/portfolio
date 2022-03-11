@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.8688b9ca.css",
-    "main.js": "/portfolio/static/js/main.1c626d67.js",
-    "static/media/foodenjoy.png": "/portfolio/static/media/foodenjoy.e03f6887707a7048bb89.png",
-    "static/media/onlineshoppingsystem.png": "/portfolio/static/media/onlineshoppingsystem.6db91d8a1021266cc6b3.png",
-    "static/media/cromahospital.png": "/portfolio/static/media/cromahospital.cac690b07938d7759aa2.png",
-    "static/media/notebook.png": "/portfolio/static/media/notebook.9694803bbe7a3fc6a134.png",
-    "static/media/portfolio.png": "/portfolio/static/media/portfolio.510c7b2e3f42b790d8a4.png",
-    "index.html": "/portfolio/index.html",
-    "static/media/email.svg": "/portfolio/static/media/email.ba4775b0eed0fb33d9be17f3e67adfd7.svg",
-    "static/media/user.svg": "/portfolio/static/media/user.9064eba1e77b5499a2451e532b3343b9.svg",
-    "main.8688b9ca.css.map": "/portfolio/static/css/main.8688b9ca.css.map",
-    "main.1c626d67.js.map": "/portfolio/static/js/main.1c626d67.js.map"
+    "main.css": "/static/css/main.8688b9ca.css",
+    "main.js": "/static/js/main.a6f51a80.js",
+    "static/media/foodenjoy.png": "/static/media/foodenjoy.e03f6887707a7048bb89.png",
+    "static/media/onlineshoppingsystem.png": "/static/media/onlineshoppingsystem.6db91d8a1021266cc6b3.png",
+    "static/media/cromahospital.png": "/static/media/cromahospital.cac690b07938d7759aa2.png",
+    "static/media/notebook.png": "/static/media/notebook.9694803bbe7a3fc6a134.png",
+    "static/media/portfolio.png": "/static/media/portfolio.510c7b2e3f42b790d8a4.png",
+    "index.html": "/index.html",
+    "static/media/email.svg": "/static/media/email.ba4775b0eed0fb33d9be17f3e67adfd7.svg",
+    "static/media/user.svg": "/static/media/user.9064eba1e77b5499a2451e532b3343b9.svg",
+    "main.8688b9ca.css.map": "/static/css/main.8688b9ca.css.map",
+    "main.a6f51a80.js.map": "/static/js/main.a6f51a80.js.map"
   },
   "entrypoints": [
     "static/css/main.8688b9ca.css",
-    "static/js/main.1c626d67.js"
+    "static/js/main.a6f51a80.js"
   ]
 }
