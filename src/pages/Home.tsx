@@ -1,31 +1,31 @@
-import {
-  Box, Container,
-  Flex,
-  Heading
-} from "@chakra-ui/react";
+import { Box, Container, Flex, Heading } from "@chakra-ui/react";
 import React from "react";
 import Skill from "../components/Skill";
 import Social from "../components/Social";
 import HighLightText from "../components/Text/HighlightText";
 import NormalText from "../components/Text/NormalText";
 import skills from "../constants/skillks";
-
-
-
+import {
+  withNavigationContext,
+  withNavigationHandlers,
+// @ts-ignore
+} from "react-awesome-slider/dist/navigation";
 
 const Introduction: React.FC = () => (
   <>
     <Heading as="h1" color="textDefault.light">
       Hello, my name is Trung
     </Heading>
-    <NormalText textAlign='center'>
+    <NormalText textAlign="center">
       I am a <HighLightText>full-stack web developer</HighLightText>
     </NormalText>
-    <NormalText textAlign='center'>
+    <NormalText textAlign="center">
       Contact with me via{" "}
       <HighLightText>hoangtrung1801.2003@gmail.com</HighLightText>
     </NormalText>
-    <NormalText textAlign='center'>Here are some technologies I've been working:</NormalText>
+    <NormalText textAlign="center">
+      Here are some technologies I've been working:
+    </NormalText>
   </>
 );
 
@@ -39,10 +39,10 @@ const Skills: React.FunctionComponent = () => {
   );
 };
 
-const Home: React.FC = () => {
+const Home: React.FC = withNavigationContext(() => {
   return (
     <Flex
-      id='about'
+      id="about"
       width="100vw"
       height="100vh"
       align="center"
@@ -61,9 +61,9 @@ const Home: React.FC = () => {
         <Introduction />
         <Skills />
       </Container>
-      <Social />
+      {/* <Social /> */}
     </Flex>
   );
-};
+});
 
 export default Home;

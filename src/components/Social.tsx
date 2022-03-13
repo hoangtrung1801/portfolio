@@ -12,7 +12,7 @@ const Social: React.FC = (): JSX.Element => {
 
   return (
 
-    <Box position="absolute" left="0" top="30%">
+    <Box position="fixed" left="0" top="30%">
       <Flex direction="column">
         {/* <Center p="2px 0"> */}
         <Text p="5px 0" textAlign="center" width="55px" as="i" fontSize={'10px'} color="#7a7a7a">Follow me</Text>

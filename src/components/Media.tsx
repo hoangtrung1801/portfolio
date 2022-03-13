@@ -1,15 +1,19 @@
-import { Box, Text } from '@chakra-ui/react';
 import React from 'react';
+import Contact from '../pages/Contact';
+import Home from '../pages/Home';
+import Projects from '../pages/Projects';
 
 export const media = [
   {
     slug: "",
-    className: "slide page-one",
-    children: (
-      <Box width="100vw" height="100vh" bgColor="red.100">
-        <Text>Hello world</Text>
-      </Box>
-    )
-
+    children: <Home />
+  },
+  {
+    slug: "projects",
+    children: <Projects />
+  },
+  {
+    slug: "contact",
+    children: <Contact />
   }
 ]

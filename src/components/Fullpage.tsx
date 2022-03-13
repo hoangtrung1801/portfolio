@@ -1,59 +1,29 @@
 import React from 'react';
-import AwesomeSlider from 'react-awesome-slider';
+import AwesomeSlider from "react-awesome-slider";
+import 'react-awesome-slider/dist/styles.css';
 import "react-awesome-slider/dist/custom-animations/cube-animation.css";
 import "react-awesome-slider/dist/custom-animations/fall-animation.css";
 import "react-awesome-slider/dist/custom-animations/fold-out-animation.css";
 import "react-awesome-slider/dist/custom-animations/scale-out-animation.css";
 import "react-awesome-slider/dist/custom-animations/open-animation.css";
 import {
-  Provider,
   withNavigationHandlers,
   withNavigationContext
   // @ts-ignore
-} from 'react-awesome-slider/dist/navigation';
-import { media } from './Media';
-import { Box, Center, Text } from '@chakra-ui/react';
+} from "react-awesome-slider/dist/navigation";
+import {media} from './Media';
+// import Startup from "../startup/startup";
 
-const NavigationSlider = withNavigationHandlers(AwesomeSlider);
+const Slider = withNavigationHandlers(AwesomeSlider);
 
-const Slider: React.FunctionComponent = () => {
+const Fullpage: React.FunctionComponent = () => {
+  const animation = 'foldOutAnimation';
   return (
-    <NavigationSlider 
-      className="awesome-slider"
-      animation="foldOutAnimation"
-      media={[
-        {
-          slug: "page-one",
-          className: "page-one",
-          children: (
-            <Center width="100w" height="100vh !important" bgColor="red.100">
-              <Text>Page one</Text>
-            </Center>
-          )
-        },
-        {
-          slug: "page-two",
-          className: "page-two",
-          children: (
-            <Center width="100w" height="100vh" bgColor="gray.100">
-              <Text>Page two</Text>
-            </Center>
-          )
-        }
-      ]}
-    >
-
-    </NavigationSlider>
+    <Slider 
+      animation={animation}
+      media={media}
+    />
   )
 }
-
-const Fullpage = withNavigationContext(({fullpage}: {fullpage: any}) => {
-
-  return (
-    <Provider slug="[the initial]">
-      <Slider/>
-    </Provider>
-  )
-})
 
 export default Fullpage;
