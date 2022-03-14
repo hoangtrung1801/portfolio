@@ -10,6 +10,8 @@ import {
   withNavigationHandlers,
 // @ts-ignore
 } from "react-awesome-slider/dist/navigation";
+import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 const Introduction: React.FC = () => (
   <>
@@ -41,28 +43,33 @@ const Skills: React.FunctionComponent = () => {
 
 const Home: React.FC = withNavigationContext(() => {
   return (
-    <Flex
-      id="about"
-      width="100vw"
-      height="100vh"
-      align="center"
-      justify="center"
-      direction="column"
-      bgColor="bgDefault"
-      position="relative"
+    <motion.div
+      exit={{opacity: 0}}
+      transition={{duration: 1}}
     >
-      <Container
-        maxW="container.md"
-        display="flex"
-        flexDirection="column"
-        alignItems="center"
-        justifyContent="center"
+      <Flex
+        as={motion.div}
+        id="about"
+        width="100vw"
+        height="100vh"
+        align="center"
+        justify="center"
+        direction="column"
+        bgColor="bgDefault"
+        position="relative"
       >
-        <Introduction />
-        <Skills />
-      </Container>
-      {/* <Social /> */}
-    </Flex>
+        <Container
+          maxW="container.md"
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          justifyContent="center"
+        >
+          <Introduction />
+          <Skills />
+        </Container>
+      </Flex>
+    </motion.div>
   );
 });
 

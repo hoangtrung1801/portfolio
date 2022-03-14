@@ -1,8 +1,9 @@
 import { Box, Flex, LinkProps, Text } from "@chakra-ui/react";
 import React from "react";
+import { Link } from "react-router-dom";
 
-const Scroll = require("react-scroll");
-const Link = Scroll.Link;
+// const Scroll = require("react-scroll");
+// const Link = Scroll.Link;
 
 interface Props {
   activeNav: boolean;
@@ -15,10 +16,11 @@ const NavItem: React.FC<
   <Box
     as={Link}
     to={to}
-    spy={true}
-    smooth={true}
-    offset={0}
-    duration={1200}
+    // to={to}
+    // spy={true}
+    // smooth={true}
+    // offset={0}
+    // duration={1200}
     textDecoration="none"
     color="#5a5a5a"
     width="90%"
@@ -94,7 +96,7 @@ const Nav: React.FC<Props> = ({ activeNav = false, toggleNav }) => {
       transform={activeNav ? "translate(0, 0)" : "translate(0, -100%)"}
       transition="transform .45s cubic-bezier(.45,0,0,1)"
     >
-      <NavItem to="about" onClick={toggleNav}>
+      <NavItem to="" onClick={toggleNav}>
         about
       </NavItem>
       <NavItem to="projects" onClick={toggleNav}>
