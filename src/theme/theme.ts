@@ -7,6 +7,13 @@ const Heading: ComponentStyleConfig = {
 }
 
 const theme = extendTheme({
+  styles: {
+    global: {
+      body: {
+        bg: 'black'
+      }
+    }
+  },
   fonts: {
     heading: "Rubik, san-serif",
     // body: "Montserrat san-serif"

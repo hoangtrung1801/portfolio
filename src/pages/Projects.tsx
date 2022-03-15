@@ -5,6 +5,7 @@ import NormalText from "../components/Text/NormalText";
 import projects from "../constants/projects";
 // @ts-ignore
 import { withNavigationContext } from "react-awesome-slider/dist/navigation";
+import Layout from "../components/Layout";
 
 const ListProjects: React.FunctionComponent = () => {
   return (
@@ -18,23 +19,25 @@ const ListProjects: React.FunctionComponent = () => {
 
 const Projects: React.FunctionComponent = withNavigationContext(() => {
   return (
-    <Flex
-      id="projects"
-      width="100vw"
-      minH="100vh"
-      p="80px 0 60px"
-      align="center"
-      justify="flex-start"
-      direction="column"
-      bgColor="bgDefault"
-    >
-      <Container maxW="container.md">
-        <Heading color="textDefault.light">my projects</Heading>
-        <NormalText>This is all my projects which I made.</NormalText>
+    <Layout>
+      <Flex
+        id="projects"
+        width="100vw"
+        minH="100vh"
+        p="80px 0 60px"
+        align="center"
+        justify="flex-start"
+        direction="column"
+        bgColor="bgDefault"
+      >
+        <Container maxW="container.md">
+          <Heading color="textDefault.light">my projects</Heading>
+          <NormalText>This is all my projects which I made.</NormalText>
 
-        <ListProjects />
-      </Container>
-    </Flex>
+          <ListProjects />
+        </Container>
+      </Flex>
+    </Layout>
   );
 });
 

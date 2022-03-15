@@ -1,7 +1,6 @@
 import { Box, Center } from '@chakra-ui/react';
 import { motion, Variants } from 'framer-motion';
-import React, { SetStateAction } from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 
 const blackBox: Variants = {
   initial: {
@@ -45,20 +44,21 @@ const text: Variants = {
 };
 
 interface IInitialPageProps {
-  setIsFirstMount: React.Dispatch<SetStateAction<boolean>>
+  // setIsFirstMount: React.Dispatch<SetStateAction<boolean>>
   // isFirstMount: boolean
 }
 
-const InitialPage: React.FunctionComponent<IInitialPageProps> = ({setIsFirstMount}) => {
-  // const [isFirstMount, setIsFirstMount] = useState(true);
+const InitialPage: React.FunctionComponent<IInitialPageProps> = () => {
+  const [isFirstMount, setIsFirstMount] = useState(true);
   const mainTitle = "hoangtrung1801";
 
   return (
     <>
-      {/* {isFirstMount && ( */}
-        <Center position="absolute" inset="0" alignItems="flex-end">
+      {isFirstMount ? (
+        <Center position="absolute" inset="0" alignItems="flex-end" minW='100vw' minH='100vh'>
           <Center
             as={motion.div}
+            key='initialPage'
             position="relative"
             zIndex="100"
             w="100%"
@@ -71,8 +71,8 @@ const InitialPage: React.FunctionComponent<IInitialPageProps> = ({setIsFirstMoun
             }}
             onAnimationComplete={() => {
               document.querySelector("#title")?.remove();
-              document.body.style.overflow = 'auto';
-              setIsFirstMount(false);
+              document.body.style.removeProperty('overflow');
+              isFirstMount && setIsFirstMount(false);
             }}
           >
             <Box
@@ -114,7 +114,7 @@ const InitialPage: React.FunctionComponent<IInitialPageProps> = ({setIsFirstMoun
             </Box>
           </Center>
         </Center>
-      {/* )} */}
+       ) : null}
     </>
   );
 }

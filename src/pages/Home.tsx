@@ -12,6 +12,7 @@ import {
 } from "react-awesome-slider/dist/navigation";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
+import Layout from "../components/Layout";
 
 const Introduction: React.FC = () => (
   <>
@@ -43,12 +44,8 @@ const Skills: React.FunctionComponent = () => {
 
 const Home: React.FC = withNavigationContext(() => {
   return (
-    <motion.div
-      exit={{opacity: 0}}
-      transition={{duration: 1}}
-    >
+    <Layout>
       <Flex
-        as={motion.div}
         id="about"
         width="100vw"
         height="100vh"
@@ -69,7 +66,7 @@ const Home: React.FC = withNavigationContext(() => {
           <Skills />
         </Container>
       </Flex>
-    </motion.div>
+    </Layout>
   );
 });
 

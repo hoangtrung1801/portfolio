@@ -8,7 +8,10 @@ interface IAnimatedPageProps {
 const AnimatedPage: React.FunctionComponent<IAnimatedPageProps> = () => {
 
   return (
-    <motion.div>
+    <motion.div
+      exit={{opacity: 0}}
+      transition={{duration: 1}}
+    >
 
     </motion.div>
   )
