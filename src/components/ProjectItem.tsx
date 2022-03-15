@@ -32,7 +32,7 @@ const ProjectItem: React.FunctionComponent<{project: Project} & BoxProps> = ({pr
           bgColor="#ddd"
           color="#6a6a6a"
           position="relative"
-          zIndex="100"
+          zIndex="10"
         >
           <Text
             textAlign="center"
