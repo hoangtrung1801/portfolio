@@ -103,7 +103,7 @@ const Contact: React.FunctionComponent = () => {
                 Icon={FacebookIcon}
                 _hover={{}}
               >
-                facebook{" "}
+                facebook
               </ButtonSocial>
               <ButtonSocial
                 bgColor="rgb(53, 53, 53)"

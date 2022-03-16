@@ -3,8 +3,6 @@ import React from "react";
 import ProjectItem from "../components/ProjectItem";
 import NormalText from "../components/Text/NormalText";
 import projects from "../constants/projects";
-// @ts-ignore
-import { withNavigationContext } from "react-awesome-slider/dist/navigation";
 import Layout from "../components/Layout";
 
 const ListProjects: React.FunctionComponent = () => {
@@ -17,7 +15,7 @@ const ListProjects: React.FunctionComponent = () => {
   );
 };
 
-const Projects: React.FunctionComponent = withNavigationContext(() => {
+const Projects: React.FunctionComponent = () => {
   return (
     <Layout>
       <Flex
@@ -39,6 +37,6 @@ const Projects: React.FunctionComponent = withNavigationContext(() => {
       </Flex>
     </Layout>
   );
-});
+};
 
 export default Projects;

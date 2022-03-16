@@ -1,49 +1,48 @@
-import { motion, Transition, Variants } from 'framer-motion';
-import React, { useEffect, useState } from 'react';
-import MenuBar from './MenuBar';
-import MotionBox from './motionComponents/MotionBox';
-import Nav from './Nav';
-import Social from './Social';
+import { motion, Transition, useAnimation, Variants } from "framer-motion";
+import React, { useState } from "react";
+import MenuBar from "./MenuBar";
+import MotionBox from "./motionComponents/MotionBox";
+import Nav from "./Nav";
+import Social from "./Social";
 
 interface ILayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 const animatedLayout: Variants = {
-  initial: {x: '-100vw'},
-  animate: {x: 0},
+  initial: { x: "-100vw"},
+  animate: { x: 0, transition: { duration: 0.8, ease: "easeInOut" } },
   exit: {
-    scale: 0.8,
-    opacity: 0,
-    transition: {duration: 0.8, ease: 'easeOut'}
-  }
-}
+    // scale: 0.8,
+    x: "100vw",
+    transition: { duration: 0.4, ease: "easeInOut", delay: 0.4 },
+  },
+};
 
 const transitionLayout: Transition = {
+  delay: 0.5,
   duration: 0.6,
-  ease: 'easeInOut'
-}
+  ease: "easeOut",
+};
 
-const Layout: React.FunctionComponent<ILayoutProps> = ({children}) => {
+const Layout: React.FunctionComponent<ILayoutProps> = ({ children }) => {
   const [activeNav, setActiveNav] = useState(false);
+  const controls = useAnimation();
 
   const toggleNav = () => {
     setActiveNav(!activeNav);
   };
 
-  useEffect(() => {
-    console.log("render");
-  }, [])
-
   return (
     <MotionBox
       overflow="hidden"
       as={motion.div}
+      // animate={controls}
       variants={animatedLayout}
-      initial='initial'
+      initial="initial"
       animate="animate"
       exit="exit"
-      transition={transitionLayout}
+      // transition={transitionLayout}
     >
       {children}
       <MenuBar activeNav={activeNav} toggleNav={toggleNav} />
@@ -51,6 +50,6 @@ const Layout: React.FunctionComponent<ILayoutProps> = ({children}) => {
       <Social />
     </MotionBox>
   );
-}
+};
 
 export default Layout;
