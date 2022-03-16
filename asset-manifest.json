@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.d94a5531.css",
-    "main.js": "/portfolio/static/js/main.7af498d4.js",
+    "main.js": "/portfolio/static/js/main.13f42554.js",
     "static/media/foodenjoy.png": "/portfolio/static/media/foodenjoy.e03f6887707a7048bb89.png",
     "static/media/onlineshoppingsystem.png": "/portfolio/static/media/onlineshoppingsystem.6db91d8a1021266cc6b3.png",
     "static/media/cromahospital.png": "/portfolio/static/media/cromahospital.cac690b07938d7759aa2.png",
@@ -11,10 +11,10 @@
     "static/media/email.svg": "/portfolio/static/media/email.ba4775b0eed0fb33d9be17f3e67adfd7.svg",
     "static/media/user.svg": "/portfolio/static/media/user.9064eba1e77b5499a2451e532b3343b9.svg",
     "main.d94a5531.css.map": "/portfolio/static/css/main.d94a5531.css.map",
-    "main.7af498d4.js.map": "/portfolio/static/js/main.7af498d4.js.map"
+    "main.13f42554.js.map": "/portfolio/static/js/main.13f42554.js.map"
   },
   "entrypoints": [
     "static/css/main.d94a5531.css",
-    "static/js/main.7af498d4.js"
+    "static/js/main.13f42554.js"
   ]
 }
