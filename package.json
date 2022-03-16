@@ -2,7 +2,7 @@
   "name": "my-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hoangtrung1801.github.io/portfolio",
+  "homepage": "https://hoangtrung1801.github.io/portfolio/",
   "dependencies": {
     "@chakra-ui/react": "^1.8.6",
     "@emotion/react": "^11.8.1",

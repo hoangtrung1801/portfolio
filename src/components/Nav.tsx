@@ -96,16 +96,16 @@ const Nav: React.FC<Props> = ({ activeNav = false, toggleNav }) => {
       transform={activeNav ? "translate(0, 0)" : "translate(0, -100%)"}
       transition="transform .45s cubic-bezier(.45,0,0,1)"
     >
-      <NavItem to="/" onClick={toggleNav}>
+      <NavItem to="/portfolio/" onClick={toggleNav}>
         about
       </NavItem>
-      <NavItem to="/projects" onClick={toggleNav}>
+      <NavItem to="/portfolio/projects" onClick={toggleNav}>
         projects
       </NavItem>
-      <NavItem to="/blogs" onClick={toggleNav}>
+      <NavItem to="/portfolio/blogs" onClick={toggleNav}>
         blogs
       </NavItem>
-      <NavItem to="/contact" onClick={toggleNav}>
+      <NavItem to="/portfolio/contact" onClick={toggleNav}>
         contact
       </NavItem>
     </Flex>

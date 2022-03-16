@@ -17,10 +17,10 @@ const ListRoute: React.FunctionComponent<IRoutesProps> = () => {
   return (
     <AnimatePresence exitBeforeEnter={true} initial={false}>
       <Routes location={location} key={location.pathname}>
-        <Route path="/" element={<Home />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/blogs" element={<Blogs />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/portfolio/" element={<Home />} />
+        <Route path="/portfolio/projects" element={<Projects />} />
+        <Route path="/portfolio/blogs" element={<Blogs />} />
+        <Route path="/portfolio/contact" element={<Contact />} />
         <Route path="*" element={<Page404 />} />
       </Routes>
     </AnimatePresence>
