@@ -1,6 +1,6 @@
 import { AnimatePresence } from "framer-motion";
 import React, { useEffect, useState } from "react";
-import { Route, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "./App.css";
 import InitialPage from "./components/InitialPage";
 import MenuBar from "./components/MenuBar";
@@ -23,12 +23,14 @@ const App: React.FC = () => {
 
   return (
     <>
+    <Routes>
+      <Route path="/" element={<div>hello</div>}/>
+      <Route path="/projects" element={<div>projects</div>}/>
+    </Routes>
     {/* <AnimatePresence exitBeforeEnter> */}
-      {/* {isFirstMount && <InitialPage isFirstMount={isFirstMount} setIsFirstMount={setIsFirstMount}/>} */}
-      {/* <InitialPage isFirstMount={isFirstMount}/> */}
-      <InitialPage />
+      {/* <InitialPage /> */}
 
-      <ListRoute />
+      {/* <ListRoute /> */}
       {/* <Routes location={location} key={location.pathname}>
 
         <Route path="/" element={<Home />} />

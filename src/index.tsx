@@ -1,19 +1,17 @@
+import { ChakraProvider } from '@chakra-ui/react';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
-import {ChakraProvider} from '@chakra-ui/react';
 import theme from './theme/theme';
-import { BrowserRouter, HashRouter } from 'react-router-dom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <HashRouter basename="/portfolio">
-      {/* <BrowserRouter basename="/portfolio"> */}
+    <Router>
         <ChakraProvider theme={theme}>
           <App />
         </ChakraProvider>
-      {/* </BrowserRouter> */}
-    </HashRouter>
+    </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );
