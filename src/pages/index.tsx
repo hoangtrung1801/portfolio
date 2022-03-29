@@ -1,35 +1,30 @@
 import {
   Box,
-  Button,
-  Center,
-  FormControl,
-  Heading,
-  HeadingProps,
-  Input,
+  Button, FormControl, Input,
   InputGroup,
   InputLeftElement,
   Link,
-  ListItem,
-  Text as TextChakra,
-  TextProps,
-  UnorderedList,
-  VStack,
+  ListItem, UnorderedList,
+  VStack
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { EnvelopeSimple, User } from "phosphor-react";
-import Text from "../components/Text";
-import React, { useState } from "react";
-import H2 from "../components/Heading2";
-import H1 from "../components/Heading1";
-import { useAppDispatch, useAppSelector } from "../app/hooks";
+import React from "react";
+import { useAppSelector } from "../app/hooks";
 import { selectIndexColor } from "../app/slices/icolorSlice";
+import H1 from "../components/Heading1";
+import H2 from "../components/Heading2";
+import Text from "../components/Text";
+import mainColors from "../constants/mainColors";
 
 
 export default function Index() {
+  const icolor = useAppSelector(selectIndexColor);
+  const color = mainColors[icolor];
 
   return (
     <>
-      <H1>
+      <H1 color={color} transition='color .4s ease'>
         Hi, I'm Hoang Trung
       </H1>
       <Text>I am a full-stack developer, I come from Vietnam.</Text>
@@ -48,7 +43,7 @@ export default function Index() {
       <UnorderedList my="2rem">
         <ListItem>
           <Link
-            color="teal.500"
+            color={color}
             href="https://github.com/hoangtrung1801/portfolio"
           >
             Portfolio
@@ -56,7 +51,7 @@ export default function Index() {
         </ListItem>
       </UnorderedList>
       <Text>
-        <Link color="teal.500" href="https://github.com/hoangtrung1801">
+        <Link color={color} href="https://github.com/hoangtrung1801">
           Read more
         </Link>{" "}
         about my projects.
@@ -88,7 +83,7 @@ export default function Index() {
       <H2>Get in touch</H2>
       <Text>
         If you wanna get in touch, please send an email to{" "}
-        <Text color="teal.400" display="inline">
+        <Text color={color} display="inline">
           hoangtrung1801@gmail.com
         </Text>{" "}
         or fill up form below then I'll contact you soon
