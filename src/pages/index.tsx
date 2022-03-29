@@ -18,11 +18,15 @@ import {
 import Image from "next/image";
 import { EnvelopeSimple, User } from "phosphor-react";
 import Text from "../components/Text";
-import React from "react";
+import React, { useState } from "react";
 import H2 from "../components/Heading2";
 import H1 from "../components/Heading1";
+import { useAppDispatch, useAppSelector } from "../app/hooks";
+import { selectIndexColor } from "../app/slices/icolorSlice";
+
 
 export default function Index() {
+
   return (
     <>
       <H1>
@@ -65,7 +69,8 @@ export default function Index() {
         width="640px"
         height="640px"
         boxShadow="xl"
-        my="2rem"
+        mt='2rem'
+        mb='3.5rem'
       >
         <Image
           src="/images/avatar.jpg"
