@@ -10,11 +10,10 @@ export default function H1({
   return (
     <Heading
       as="h1"
-      size="2xl"
-      my="1.5rem"
-      lineHeight="1.25"
+      size='3xl'
+      my="2rem"
       letterSpacing="1.5px"
-      fontWeight="800"
+      fontWeight="900"
       {...props}
     >
       {children}

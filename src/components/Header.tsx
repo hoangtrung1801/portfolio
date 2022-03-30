@@ -42,9 +42,7 @@ export default function Header({}: HeaderProps) {
 
   return (
     <Flex maxW="3xl" mx="auto" p="3rem 1rem 0 1rem">
-      <Center mr='16px' border='1px solid #b2bec3' p='5px' cursor='default' >
-        <Text fontWeight='extrabold' fontSize='24px'>htu</Text>
-      </Center>
+      <Logo />
       <HStack spacing="24px">
         {pages.map((page, id) => (
           <NavItem href={page.href} key={id} isActive={page.href === router.route}>
@@ -61,6 +59,14 @@ export default function Header({}: HeaderProps) {
   );
 }
 
+const Logo = () => (
+  <Center mr="20px" border="1px solid #b2bec3" p="5px" cursor="default" fontFamily="Rubik, san-serif">
+    <Text fontWeight="extrabold" fontSize="24px">
+      htu
+    </Text>
+  </Center>
+);
+
 const NavItem = ({
   children,
   href,
@@ -70,7 +76,32 @@ const NavItem = ({
   href: string;
   isActive: boolean;
 } & LinkProps) => (
-  <Link href={href}>
-    <LinkStyle textDecor={isActive && 'underline'}>{children}</LinkStyle>
+  <Link href={href} >
+    <LinkStyle 
+    position='relative'
+      _before={{
+        content: `''`,
+        width: `${isActive ? '100%' : '0'}`,
+        height: '3px',
+        position: 'absolute',
+        bottom: '-1px',
+        left: '0',
+        bgColor: 'black',
+        borderRadius: '24px',
+        transition: 'all .3s ease'
+      }}
+      _hover={{
+        '&::before' : { 
+          width: '100%',
+        },
+        '& > *' : {
+          transform: 'translateY(-3px)'
+        }
+      }}
+    >
+      <Text transition='all .3s ease' 
+      // transform={isActive && 'translateY(-3px)'}
+      >{children}</Text>
+    </LinkStyle>
   </Link>
 );

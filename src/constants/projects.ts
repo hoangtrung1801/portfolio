@@ -8,7 +8,7 @@ import onlineshoppingsystem from '../images/onlineshoppingsystem.png';
 const projects: Project[] = [
   {
     title: 'portfolio',
-    image: portfolio,
+    image: '/images/portfolio.png',
     href: 'https://github.com/hoangtrung1801/portfolio',
     skills: [
       'react', 'chakra ui', 'typescript', 'animation'
@@ -16,7 +16,7 @@ const projects: Project[] = [
   }, 
   {
     title: 'FoodEnjoy',
-    image: foodenjoy,
+    image: '/images/foodenjoy.png',
     href: 'https://github.com/hoangtrung1801/foodenjoy',
     skills: [
       'node.js', 'express.js', 'pug', 'css'
@@ -24,7 +24,7 @@ const projects: Project[] = [
   },
   {
     title: 'notebook',
-    image: notebook,
+    image: '/images/notebook.png',
     href: 'https://github.com/hoangtrung1801/Notebook-app',
     skills: [
       'react', 'redux', 'styled components', 'css'
@@ -32,7 +32,7 @@ const projects: Project[] = [
   },
   {
     title: 'croma hospital api',
-    image: cromahospital,
+    image: '/images/cromahospital.png',
     href: 'https://github.com/hoangtrung1801/croma-hospital-api',
     skills: [
       'node.js', 'express.js', 'mongodb', 'mongoose', 'redis', 'data structure & algorithm'
@@ -40,7 +40,7 @@ const projects: Project[] = [
   },
   {
     title: 'online shopping system',
-    image: onlineshoppingsystem,
+    image: '/images/onlineshoppingsystem.png',
     href: 'https://github.com/hoangtrung1801/online-shopping-system-java',
     skills: [
       'java', 'sql server', 'javafx'

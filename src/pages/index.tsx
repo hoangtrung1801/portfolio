@@ -4,7 +4,7 @@ import {
   InputGroup,
   InputLeftElement,
   Link,
-  ListItem, UnorderedList,
+  ListItem, SimpleGrid, UnorderedList,
   VStack
 } from "@chakra-ui/react";
 import Image from "next/image";
@@ -14,6 +14,7 @@ import { useAppSelector } from "../app/hooks";
 import { selectIndexColor } from "../app/slices/icolorSlice";
 import H1 from "../components/Heading1";
 import H2 from "../components/Heading2";
+import ProjectList from "../components/ProjectList";
 import Text from "../components/Text";
 import mainColors from "../constants/mainColors";
 
@@ -24,8 +25,10 @@ export default function Index() {
 
   return (
     <>
-      <H1 color={color} transition='color .4s ease'>
-        Hi, I'm Hoang Trung
+      {/* <H1 color={color} transition='color .4s ease'> */}
+      {/* Introduce */}
+      <H1>
+        Hi, I'm <Box as='span' color={color} transition='all 0.4s ease'>Hoang Trung</Box>👋
       </H1>
       <Text>I am a full-stack developer, I come from Vietnam.</Text>
       <Text>
@@ -33,30 +36,24 @@ export default function Index() {
         writes blog in here.
       </Text>
 
+      {/* Projects */}
       <H2>Projects</H2>
       <Text>
         I usually go to build project for myself, practice or clients. In
         front-end, my weapons of choice are React, Typescript and Nextjs. In
         back-end, I uses Nodejs, Expressjs for building API.
       </Text>
+      
       <Text>Here are some of the major projects I've made: </Text>
-      <UnorderedList my="2rem">
-        <ListItem>
-          <Link
-            color={color}
-            href="https://github.com/hoangtrung1801/portfolio"
-          >
-            Portfolio
-          </Link>
-        </ListItem>
-      </UnorderedList>
+      <ProjectList />
       <Text>
-        <Link color={color} href="https://github.com/hoangtrung1801">
+        <Link color={color} fontWeight='500' href="https://github.com/hoangtrung1801">
           Read more
         </Link>{" "}
         about my projects.
       </Text>
 
+      {/* About me */}
       <H2>About me</H2>
       <Box
         overflow="hidden"
@@ -80,6 +77,7 @@ export default function Index() {
         Technology
       </Text>
 
+      {/* Get in touch */}
       <H2>Get in touch</H2>
       <Text>
         If you wanna get in touch, please send an email to{" "}

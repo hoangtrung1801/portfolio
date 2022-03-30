@@ -11,7 +11,7 @@ export default function Text({
   ...props
 }: TextProps & TextChakarProps) {
   return (
-    <TextChakra mb="2rem" {...props}>
+    <TextChakra mb="2rem" fontWeight='400' fontSize='1.125rem' lineHeight='1.75rem' letterSpacing='.025rem' {...props}>
       {children}
     </TextChakra>
   );
