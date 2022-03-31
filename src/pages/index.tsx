@@ -5,7 +5,8 @@ import {
   InputLeftElement,
   Link,
   ListItem, SimpleGrid, UnorderedList,
-  VStack
+  VStack,
+  Image as ImageChakra
 } from "@chakra-ui/react";
 import Image from "next/image";
 import { EnvelopeSimple, User } from "phosphor-react";
@@ -30,7 +31,7 @@ export default function Index() {
       <H1>
         Hi, I'm <Box as='span' color={color} transition='all 0.4s ease'>Hoang Trung</Box>👋
       </H1>
-      <Text>I am a full-stack developer, I come from Vietnam.</Text>
+      <Text>I am a full-stack developer, I come from Vietnam <ImageChakra src="/images/vietnam.png" display='inline' w='24px' verticalAlign='bottom'/>.</Text>
       <Text>
         This is my portfolio, where I introduces myself, my projects and I
         writes blog in here.

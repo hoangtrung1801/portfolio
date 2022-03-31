@@ -25,10 +25,10 @@ const textContainer: Variants = {
     opacity: 1,
   },
   animate: {
-    y: -100, 
+    y: -200, 
     opacity: 0,
     transition: {
-      duration: 0.25,
+      duration: 0.5,
       when: "afterChildren",
     },
   },
