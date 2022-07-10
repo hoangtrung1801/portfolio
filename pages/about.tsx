@@ -42,8 +42,7 @@ const About = () => {
                 </span>
             </h1>
             <p>
-                I’m Braydon, a developer,{" "}
-                <a href={siteMetadata.codepen}>creative coder</a>,{" "}
+                I’m Braydon, a developer, <a href={""}>creative coder</a>,{" "}
                 <Link href="/blog">
                     <a>blogger</a>
                 </Link>{" "}
@@ -94,17 +93,16 @@ const About = () => {
                         outselling Angry Birds.
                     </p>
                     <p>
-                        You can find me on{" "}
-                        <a href={siteMetadata.twitter}>Twitter</a> where I share
-                        tech-related tidbits and build in public, or you can
-                        follow me on <a href={siteMetadata.github}>GitHub</a>. I
-                        often write about my findings on my{" "}
+                        You can find me on <a href={""}>Twitter</a> where I
+                        share tech-related tidbits and build in public, or you
+                        can follow me on{" "}
+                        <a href={siteMetadata.github}>GitHub</a>. I often write
+                        about my findings on my{" "}
                         <Link href="/blog">
                             <a>blog</a>
                         </Link>{" "}
-                        and create cool things over on{" "}
-                        <a href={siteMetadata.codepen}>CodePen</a>. I also help
-                        run a mediocre{" "}
+                        and create cool things over on <a href={""}>CodePen</a>.
+                        I also help run a mediocre{" "}
                         <a href="https://anchor.fm/florida-man">podcast</a>.
                     </p>
                 </div>

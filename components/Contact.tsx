@@ -83,6 +83,15 @@ function ContactCard({}) {
                     } issues`}</a>
                 </p>
             )} */}
+            <p>
+                <span className="text-sm text-gray">or </span>
+                {/* <a href="" className="text-base">
+                    {siteMetadata.email}
+                </a> */}
+                <span className="text-base underline underline-offset-[3px] decoration-gray-300 dark:decoration-gray-400">
+                    {siteMetadata.email}
+                </span>
+            </p>
         </div>
     );
 }
@@ -91,17 +100,17 @@ function InlineContact({}) {
     return (
         <div>
             <h3 className="my-0 text-sm font-semibold tracking-wider uppercase">
-                Newsletter
+                Get in touch!
             </h3>
             <p className="mt-4 text-base ">
-                Get new articles delivered to your inbox!
+                You can send me your email and I{"'"}ll reply as soon as I can.
             </p>
             <form className="relative flex my-4 space-y-0">
                 <label htmlFor="email-address" className="sr-only">
                     Email address
                 </label>
                 <input
-                    placeholder="bobloblaw@gmail.com"
+                    placeholder="email@gmail.com"
                     type="email"
                     autoComplete="email"
                     required
@@ -124,6 +133,15 @@ function InlineContact({}) {
             ) : form.state === Form.Success ? (
                 <SuccessMessage>{form.message}</SuccessMessage>
             ) : null} */}
+            <p>
+                <span className="text-sm text-gray">or </span>
+                {/* <a href="" className="text-base">
+                    {siteMetadata.email}
+                </a> */}
+                <span className="text-base underline underline-offset-[3px] decoration-gray-300 dark:decoration-gray-400">
+                    {siteMetadata.email}
+                </span>
+            </p>
         </div>
     );
 }
