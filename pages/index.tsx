@@ -1,11 +1,15 @@
 import siteMetadata from "data/siteMetadata";
 import { Button } from "components/Button";
 import Container from "layouts/Container";
-import { ButtonType } from "lib/types";
+import { ButtonType, ContactSize } from "lib/types";
 import type { NextPage } from "next";
 import Image from "next/image";
+import { useRouter } from "next/router";
+import Contact from "components/Contact";
 
 const Home: NextPage = () => {
+    const { push } = useRouter();
+
     return (
         <Container showCircles>
             <div>
@@ -14,10 +18,11 @@ const Home: NextPage = () => {
                         <h1 className="order-2 col-span-5 text-4xl leading-tight md:leading-normal md:order-1 sm:text-5xl">
                             I{"'"}m{" "}
                             <span className="text-teal-500 dark:text-teal-400">
-                                Braydon
+                                {siteMetadata.name}
                             </span>
-                            . I{"'"}m a developer, blogger and designer working
-                            at LogicGate.
+                            . I{"'"}m a software engineer, full-stack developer
+                            working as a freelancer.
+                            <span className="inline-flex items-center">👋</span>
                         </h1>
                         <div className="order-1 md:order-2">
                             <Image
@@ -35,13 +40,13 @@ const Home: NextPage = () => {
                     <div className="space-y-6 md:space-y-0 md:space-x-4">
                         <Button
                             buttonType={ButtonType.PRIMARY}
-                            // onButtonClick={() => push("/blog")}
+                            onButtonClick={() => push("/blog")}
                         >
                             Read the blog
                         </Button>
                         <Button
                             buttonType={ButtonType.SECONDARY}
-                            // onButtonClick={() => push("/about")}
+                            onButtonClick={() => push("/about")}
                         >
                             More about me
                         </Button>
@@ -49,19 +54,20 @@ const Home: NextPage = () => {
                 </div>
                 <hr className="hr"></hr>
                 <div>
-                    <h2>I love to share my knowledge through writing.</h2>
+                    {/* <h2>I love to share my knowledge through writing.</h2>
                     <p>Check out a few of my most recent publishings.</p>
-                    {/* <ArticleList articles={recentArticles} /> */}
+                    <ArticleList articles={recentArticles} />
                     <div className="my-16">
                         <Button
                             buttonType={ButtonType.PRIMARY}
-                            // onButtonClick={() => push("/blog")}
+                            onButtonClick={() => push("/blog")}
                         >
                             See all articles
                         </Button>
-                    </div>
+                    </div> */}
                     <div className="mt-16">
                         {/* <Subscribe size={SubscribeSize.LARGE} /> */}
+                        <Contact size={ContactSize.LARGE} />
                     </div>
                 </div>
             </div>

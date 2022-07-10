@@ -1,3 +1,4 @@
+import siteMetadata from "@/data/siteMetadata";
 import Footer from "components/Footer";
 import NavMenu from "components/NavMenu";
 import { PageTransition } from "components/PageTransition";
@@ -25,7 +26,7 @@ const Container: React.FC<ContainerProps> = ({
             }`}
         >
             <Head>
-                <title>{title}</title>
+                <title>{title || siteMetadata.title}</title>
             </Head>
             <NavMenu />
             <main

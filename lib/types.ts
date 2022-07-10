@@ -20,7 +20,7 @@ export type FormState = {
     message?: string;
 };
 
-export enum SubscribeSize {
+export enum ContactSize {
     SMALL = "small",
     LARGE = "large"
 }

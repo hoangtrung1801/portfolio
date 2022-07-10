@@ -77,14 +77,14 @@ const About = () => {
                 <div className="col-span-1">
                     <Image
                         className="rounded-xl group-hover:opacity-75"
-                        objectFit="fill"
-                        src="https://res.cloudinary.com/braydoncoyer/image/upload/v1636553710/avatar.jpg"
+                        objectFit="cover"
+                        src={siteMetadata.avatarImage}
                         placeholder="blur"
-                        blurDataURL="https://res.cloudinary.com/braydoncoyer/image/upload/v1636553710/avatar.jpg"
+                        blurDataURL={siteMetadata.avatarImage}
                         width={260}
                         height={260}
                         layout="responsive"
-                        alt={"article cover"}
+                        alt={"avatar cover"}
                     />
                 </div>
                 <div className="col-span-3">

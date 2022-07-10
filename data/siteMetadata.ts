@@ -1,14 +1,17 @@
 const siteMetadata = {
-    title: "Braydon Coyer – full-stack engineer, writer, creative developer.",
-    author: "Braydon Coyer",
-    headerTitle: "Braydon's Portfolio",
+    title: "hoangtrung1801's Portfolio",
+    author: "Hoàng Trung",
+    name: "Hoàng Trung",
+    username: "hoangtrung1801",
+    headerTitle: "hoangtrung1801's Portfolio",
     description:
-        "I'm Braydon. I'm a senior front end developer, blogger and designer. Welcome to my corner of the internet. I'm glad you're here!",
+        "I'm Hoàng Trung. I'm a senior front end developer, blogger and designer. Welcome to my corner of the internet. I'm glad you're here!",
     language: "en-us",
     siteUrl: "https://braydoncoyer.dev",
     siteRepo: "https://github.com/braydoncoyer/braydoncoyer.dev",
     //   siteLogo: "/static/images/bundle_logo.svg",
-    avatarImage: "https://picsum.photos/500",
+    avatarImage:
+        "https://res.cloudinary.com/hoangtrung1801/image/upload/v1657434332/portfolio/avatar.jpg",
     socialBanner:
         "https://res.cloudinary.com/braydoncoyer/image/upload/v1638884997/default-social-image.png",
     email: "mailto:braydon@coyer.net",

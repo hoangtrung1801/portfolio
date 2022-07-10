@@ -7,18 +7,13 @@ import { Form, ContactSize, Subscribers } from "lib/types";
 // import { useSubscribeToNewsletter } from "@/lib/hooks/useSubscribeToNewsletter";
 import siteMetadata from "data/siteMetadata";
 import useSWR from "swr";
+import React from "react";
 
-function SubscribeCard({
-    handleSubscribe,
-    form,
-    inputRef,
-    subscriberCount,
-    issuesCount
-}) {
+function ContactCard({}) {
     return (
         <div className="border border-gray-200 rounded-lg p-6 my-4 w-full dark:border-gray-700 bg-[#F8FAFC] dark:bg-midnight">
             <h3 className="flex items-center mt-2 font-bold text-gray-900 md:text-2xl dark:text-gray-100">
-                Updates delivered to your inbox!
+                Get in touch!
                 <span>
                     <svg
                         className="w-6 h-6 ml-1 md:w-7 md:h-7"
@@ -44,25 +39,17 @@ function SubscribeCard({
             </h3>
 
             <p className="mb-0">
-                A periodic update about my life, recent blog posts, how-tos, and
-                discoveries.
+                Want to connect with me or collaborate on projects together, You
+                can send me your email and I{"'"}ll reply as soon as I can...
+                Thank You.
             </p>
-            <p className="mt-0">
-                As a thank you, I{"'"}ll also send you a{" "}
-                <span className="text-indigo-500 font-fancy dark:text-indigo-400">
-                    Free CSS
-                </span>{" "}
-                tutorial!
-            </p>
-            <p>No spam - unsubscribe at any time!</p>
 
             <form
                 className="relative my-4 space-y-4 md:space-y-0 md:flex"
-                onSubmit={handleSubscribe}
+                // onSubmit={handleSubscribe}
             >
                 <input
-                    ref={inputRef}
-                    placeholder="bobloblaw@gmail.com"
+                    placeholder="email@gmail.com"
                     type="email"
                     autoComplete="email"
                     required
@@ -72,6 +59,7 @@ function SubscribeCard({
                     className="absolute top-[-13px] right-[3px] md:right-[5px] md:top-[5px] py-0.5 md:py-1 items-center justify-center px-4 bg-indigo-500 hover:bg-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400 text-white rounded-full"
                     type="submit"
                 >
+                    Submit
                     {/* {form.state === Form.Loading ? (
                         <LoadingSpinner />
                     ) : (
@@ -99,7 +87,7 @@ function SubscribeCard({
     );
 }
 
-function InlineSubscribe({ handleSubscribe, form, inputRef }) {
+function InlineContact({}) {
     return (
         <div>
             <h3 className="my-0 text-sm font-semibold tracking-wider uppercase">
@@ -108,15 +96,11 @@ function InlineSubscribe({ handleSubscribe, form, inputRef }) {
             <p className="mt-4 text-base ">
                 Get new articles delivered to your inbox!
             </p>
-            <form
-                className="relative flex my-4 space-y-0"
-                onSubmit={handleSubscribe}
-            >
+            <form className="relative flex my-4 space-y-0">
                 <label htmlFor="email-address" className="sr-only">
                     Email address
                 </label>
                 <input
-                    ref={inputRef}
                     placeholder="bobloblaw@gmail.com"
                     type="email"
                     autoComplete="email"
@@ -127,6 +111,7 @@ function InlineSubscribe({ handleSubscribe, form, inputRef }) {
                     className="absolute right-[3px] top-[3px] md:right-[5px] md:top-[5px] py-0.5 md:py-1 items-center justify-center px-4 bg-indigo-500 hover:bg-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400 text-white rounded-full"
                     type="submit"
                 >
+                    Submit
                     {/* {form.state === Form.Loading ? (
                         <LoadingSpinner />
                     ) : (
@@ -143,11 +128,11 @@ function InlineSubscribe({ handleSubscribe, form, inputRef }) {
     );
 }
 
-type Props = {
+interface ContactProps {
     size: ContactSize;
-};
+}
 
-export function Subscribe({ size }: Props) {
+const Contact: React.FC<ContactProps> = ({ size }) => {
     // const { form, subscribe, inputEl } = useSubscribeToNewsletter();
     // const { data: subData } = useSWR<Subscribers>("/api/subscribers", fetcher);
     // const { data: issueData } = useSWR<Subscribers>("/api/issues", fetcher);
@@ -164,15 +149,11 @@ export function Subscribe({ size }: Props) {
     //     );
     // }
 
-    // return (
-    //     <SubscribeCard
-    //         handleSubscribe={subscribe}
-    //         form={form}
-    //         inputRef={inputEl}
-    //         subscriberCount={subscriberCount}
-    //         issuesCount={issuesCount}
-    //     />
-    // );
+    if (size == ContactSize.SMALL) {
+        return <InlineContact />;
+    }
 
-    return <div></div>;
-}
+    return <ContactCard />;
+};
+
+export default Contact;
