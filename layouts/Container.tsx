@@ -1,10 +1,21 @@
 import Footer from "components/Footer";
 import NavMenu from "components/NavMenu";
 import { PageTransition } from "components/PageTransition";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import React from "react";
 
-const Container = ({ children, showCircles }) => {
+interface ContainerProps {
+    children: React.ReactNode;
+    showCircles?: boolean;
+    title?: string;
+}
+
+const Container: React.FC<ContainerProps> = ({
+    children,
+    showCircles,
+    title
+}) => {
     const router = useRouter();
 
     return (
@@ -13,6 +24,9 @@ const Container = ({ children, showCircles }) => {
                 showCircles && "overflow-hidden"
             }`}
         >
+            <Head>
+                <title>{title}</title>
+            </Head>
             <NavMenu />
             <main
                 className={`flex flex-col mx-auto max-w-6xl justify-center px-4 bg-white dark:bg-dark prose prose-lg dark:prose-dark relative`}
