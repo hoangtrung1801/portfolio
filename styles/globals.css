@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+  .my-email {
+    @apply text-base underline underline-offset-[3px] decoration-gray-300 dark:decoration-gray-400;
+  }
+}
+
 .circle-obj {
   background: radial-gradient(
     closest-side,

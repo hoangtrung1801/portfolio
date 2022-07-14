@@ -88,9 +88,7 @@ function ContactCard({}) {
                 {/* <a href="" className="text-base">
                     {siteMetadata.email}
                 </a> */}
-                <span className="text-base underline underline-offset-[3px] decoration-gray-300 dark:decoration-gray-400">
-                    {siteMetadata.email}
-                </span>
+                <span className="my-email">{siteMetadata.email}</span>
             </p>
         </div>
     );
@@ -138,9 +136,7 @@ function InlineContact({}) {
                 {/* <a href="" className="text-base">
                     {siteMetadata.email}
                 </a> */}
-                <span className="text-base underline underline-offset-[3px] decoration-gray-300 dark:decoration-gray-400">
-                    {siteMetadata.email}
-                </span>
+                <span className="my-email">{siteMetadata.email}</span>
             </p>
         </div>
     );
