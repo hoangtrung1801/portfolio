@@ -4,6 +4,8 @@ import { useRouter } from "next/router";
 import NextLink from "next/link";
 import { useTheme } from "next-themes";
 import { useEffect } from "react";
+import siteMetadata from "@/data/siteMetadata";
+import { Dialog } from "@headlessui/react";
 
 function NavItem({ href, text }) {
     const router = useRouter();
@@ -34,6 +36,7 @@ function NavItem({ href, text }) {
 
 const NavMenu = () => {
     const [mounted, setMounted] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
     const { setTheme, resolvedTheme } = useTheme();
 
     useEffect(() => setMounted(true), []);
@@ -44,16 +47,19 @@ const NavMenu = () => {
                 <div className="flex justify-start lg:w-0 lg:flex-1">
                     <span className="sr-only">Profile Picture</span>
                     <Image
-                        alt="Braydon Coyer"
+                        alt={siteMetadata.name}
                         height={48}
                         width={48}
-                        src={"https://picsum.photos/500"}
+                        src={siteMetadata.avatarImage}
                         placeholder="blur"
-                        blurDataURL={"https://picsum.photos/500"}
+                        blurDataURL={siteMetadata.avatarImage}
                         className="rounded-full"
                     />
                 </div>
-                <div className="-my-2 -mr-2 md:hidden">
+                <div
+                    className="-my-2 -mr-2 md:hidden"
+                    onClick={() => setIsOpen(true)}
+                >
                     <div className="bg-gray-200 dark:bg-midnight text-gray-600 dark:text-gray-300 rounded-full p-3.5 inline-flex items-center justify-center hover:text-gray-700 hover:bg-gray-300 cursor-pointer focus:outline-none general-ring-state">
                         <span className="sr-only">Open menu</span>
                         <svg
@@ -207,7 +213,7 @@ const NavMenu = () => {
             </div>
 
             {/* Conditional rendering here to ensure that dialog portal isn't removed on route change. */}
-            {/* {isOpen && (
+            {isOpen && (
                 <Dialog
                     open={isOpen}
                     onClose={() => setIsOpen(false)}
@@ -398,7 +404,7 @@ const NavMenu = () => {
                         </div>
                     </div>
                 </Dialog>
-            )} */}
+            )}
         </div>
     );
 };

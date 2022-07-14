@@ -17,13 +17,10 @@ const siteMetadata = {
     github: "https://github.com/hoangtrung1801",
     facebook: "https://facebook.com/trung181",
     linkedin: "https://www.linkedin.com/in/trung-le-339841220/",
-    resume: "/static/braydoncoyer_resume.pdf",
-    carbonCode: "CESDE27N",
-    carbonPlacement: "braydoncoyerdev",
-    locale: "en-US",
-    analytics: {
-        plausibleDataDomain: "braydoncoyer.dev"
-    }
+    resume: "https://drive.google.com/file/d/17VaKGmS9c0l_hPA3O9Qj7kDJDKB11qoT/view?usp=sharing"
+    // analytics: {
+    // plausibleDataDomain: "braydoncoyer.dev"
+    // }
 };
 
 export default siteMetadata;

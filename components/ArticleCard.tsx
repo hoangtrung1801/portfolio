@@ -29,14 +29,14 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
                         {/* {JSON.stringify(article)} */}
                         {/* <p>{article.summary}</p> */}
                         <span className="text-base font-semibold flex items-center">
-                            {new Date(article.publishedDate).toLocaleDateString(
+                            {/* {new Date(article.publishedDate).toLocaleDateString(
                                 siteMetadata.locale,
                                 {
                                     year: "numeric",
                                     month: "long",
                                     day: "numeric"
                                 }
-                            )}{" "}
+                            )}{" "} */}
                             {/* {hasRead && (
                                 <span className="text-sm inline-flex items-center text-teal-600 dark:text-teal-800 opacity-75 ml-3">
                                     <svg
