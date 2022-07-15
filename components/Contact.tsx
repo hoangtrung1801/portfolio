@@ -6,7 +6,6 @@ import { Form, ContactSize, Subscribers } from "lib/types";
 // import { fetcher } from "@/lib/fetcher";
 // import { useSubscribeToNewsletter } from "@/lib/hooks/useSubscribeToNewsletter";
 import siteMetadata from "data/siteMetadata";
-import useSWR from "swr";
 import React from "react";
 
 function ContactCard({}) {

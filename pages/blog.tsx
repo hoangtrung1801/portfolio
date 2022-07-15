@@ -1,7 +1,9 @@
 import ArticleList from "components/ArticleList";
 import Tag from "components/Tag";
 import Container from "layouts/Container";
+import client from "lib/apollo-client";
 import getAllPosts from "lib/getAllPosts";
+import { GET_POSTS } from "lib/queries";
 import { GetServerSideProps, NextPage } from "next";
 import { useState } from "react";
 

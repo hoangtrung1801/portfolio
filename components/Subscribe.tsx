@@ -1,12 +1,6 @@
-import { Form, ContactSize, Subscribers } from "lib/types";
+import { ContactSize } from "lib/types";
 
 // import { ErrorMessage } from "./ErrorMessage";
-// import { LoadingSpinner } from "./LoadingSpinner";
-// import { SuccessMessage } from "./SuccessMessage";
-// import { fetcher } from "@/lib/fetcher";
-// import { useSubscribeToNewsletter } from "@/lib/hooks/useSubscribeToNewsletter";
-import siteMetadata from "data/siteMetadata";
-import useSWR from "swr";
 
 function SubscribeCard({
     handleSubscribe,
