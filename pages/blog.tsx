@@ -1,8 +1,8 @@
-import usePosts from "@/hooks/usePosts";
 import ArticleList from "components/ArticleList";
 import Tag from "components/Tag";
 import Container from "layouts/Container";
-import { NextPage } from "next";
+import getAllPosts from "lib/getAllPosts";
+import { GetServerSideProps, NextPage } from "next";
 import { useState } from "react";
 
 const tags = [
@@ -17,20 +17,12 @@ const tags = [
     "web"
 ];
 
-interface BlogProps {}
+interface BlogProps {
+    posts: any[];
+}
 
-const Blog: NextPage<BlogProps> = ({}) => {
+const Blog: NextPage<BlogProps> = ({ posts }) => {
     const [selectedTag, setSelectedTag] = useState<string>("all");
-    const { posts, isLoading, error } = usePosts();
-
-    //   const filteredArticles = articles
-    //     .sort((a, b) => Number(new Date(b.publishedDate)))
-    //     .filter((post) => {
-    //       return (
-    //         post.title.toLowerCase().includes(searchValue.toLowerCase()) ||
-    //         post.tags.some((el) => el.name === searchValue.toLocaleLowerCase())
-    //       );
-    //     });
 
     return (
         <Container title="Blog - hoangtrung1801">
@@ -53,11 +45,10 @@ const Blog: NextPage<BlogProps> = ({}) => {
                     </div>
                 ))}
             </div>
-            {isLoading && (
+            {!posts && (
                 <div className="w-full mx-auto rounded-lg bg-[#F8FAFC] dark:bg-midnight p-4">
                     <p className="flex items-center justify-center text-2xl">
-                        {/* No articles found{" "} */}
-                        Loadig...
+                        No articles found{" "}
                         <span>
                             <svg
                                 className="ml-3 w-7 h-7"
@@ -95,9 +86,19 @@ const Blog: NextPage<BlogProps> = ({}) => {
                     </p>
                 </div>
             )}
-            <ArticleList articles={posts} />
+            {posts && <ArticleList articles={posts} />}
         </Container>
     );
+};
+
+export const getServerSideProps: GetServerSideProps = async (context) => {
+    const posts = await getAllPosts();
+
+    return {
+        props: {
+            posts
+        }
+    };
 };
 
 export default Blog;
