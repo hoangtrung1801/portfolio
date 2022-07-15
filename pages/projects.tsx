@@ -18,7 +18,7 @@ const Projects = () => {
             </h1>
             <div className="grid grid-cols-1 gap-x-12 gap-y-4 md:gap-y-24 md:grid-cols-3">
                 {projects.map((project) => (
-                    <div key={project.title} className="mb-16 md:mb-0">
+                    <>
                         <div className="col-span-1 py-2">
                             <h2 className="mt-0">{project.title}</h2>
                             <p>{project.description}</p>
@@ -62,7 +62,7 @@ const Projects = () => {
                                 Visit CSS Art Challenge
                             </a> */}
                         </div>
-                        <div className="col-span-2">
+                        <div className="col-span-2 mb-16 md:mb-0">
                             <div className="grid grid-cols-1 gap-4 md:grid-cols-5">
                                 <div className="relative col-span-5 overflow-hidden rounded-lg md:h-[450px] h-auto">
                                     <Image
@@ -78,7 +78,7 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </>
                 ))}
 
                 <a

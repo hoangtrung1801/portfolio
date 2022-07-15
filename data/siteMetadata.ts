@@ -17,7 +17,9 @@ const siteMetadata = {
     github: "https://github.com/hoangtrung1801",
     facebook: "https://facebook.com/trung181",
     linkedin: "https://www.linkedin.com/in/trung-le-339841220/",
-    resume: "https://drive.google.com/file/d/17VaKGmS9c0l_hPA3O9Qj7kDJDKB11qoT/view?usp=sharing"
+    resume: "https://drive.google.com/file/d/17VaKGmS9c0l_hPA3O9Qj7kDJDKB11qoT/view?usp=sharing",
+    hashnodeUsername: "hoangtrung1801",
+    hashnodeUrl: "https://hoangtrung1801.hashnode.dev/"
     // analytics: {
     // plausibleDataDomain: "braydoncoyer.dev"
     // }

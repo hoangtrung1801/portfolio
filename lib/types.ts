@@ -52,6 +52,14 @@ export type Article = {
     lastUpdatedDate?: any;
 };
 
+export type ArticlePreview = {
+    title: string;
+    brief: string;
+    slug: string;
+    dateAdded: string;
+    coverImage: string;
+};
+
 export type Reactions = {
     like_count: number;
     love_count: number;

@@ -1,9 +1,9 @@
-import { Article } from "lib/types";
+import { Article, ArticlePreview } from "lib/types";
 import Image from "next/image";
 import siteMetadata from "@/data/siteMetadata";
 
 interface ArticleCardProps {
-    article: Article;
+    article: ArticlePreview;
 }
 
 const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
@@ -19,8 +19,8 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
                         src={article.coverImage}
                         placeholder="blur"
                         blurDataURL={article.coverImage}
-                        width={684}
-                        height={800}
+                        width={800}
+                        height={400}
                         layout="intrinsic"
                         alt={"article cover"}
                     />
@@ -29,14 +29,14 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
                         {/* {JSON.stringify(article)} */}
                         {/* <p>{article.summary}</p> */}
                         <span className="text-base font-semibold flex items-center">
-                            {/* {new Date(article.publishedDate).toLocaleDateString(
-                                siteMetadata.locale,
+                            {new Date(article.dateAdded).toLocaleDateString(
+                                "en-us",
                                 {
                                     year: "numeric",
                                     month: "long",
                                     day: "numeric"
                                 }
-                            )}{" "} */}
+                            )}
                             {/* {hasRead && (
                                 <span className="text-sm inline-flex items-center text-teal-600 dark:text-teal-800 opacity-75 ml-3">
                                     <svg
@@ -56,6 +56,9 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
                                     <span>read</span>
                                 </span>
                             )} */}
+                        </span>
+                        <span className="text-sm font-light">
+                            {article.brief}
                         </span>
                     </div>
                 </div>
