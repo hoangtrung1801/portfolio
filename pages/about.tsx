@@ -3,7 +3,7 @@ import siteMetadata from "@/data/siteMetadata";
 import Container from "layouts/Container";
 import Image from "next/image";
 import Link from "next/link";
-import VietnamIcon from "static/images/vietnam.svg";
+// import VietnamIcon from "static/images/vietnam.svg";
 
 const educations = [
     {
@@ -48,7 +48,7 @@ const About = () => {
                 developer. I am a Vietnamese 🇻🇳{" "}
                 <Image
                     className="-mb-[3px]"
-                    src={VietnamIcon}
+                    src={"/images/vietnam.svg"}
                     alt="Vietnam icon"
                     layout="fixed"
                     width={24}

@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import projects from "@/data/projects";
 import { LinkSimple, GithubLogo } from "phosphor-react";
+import { ArrowRight } from "phosphor-react";
 
 const Projects = () => {
     return (
@@ -26,6 +27,8 @@ const Projects = () => {
                                     <a
                                         className="text-base decoration-neutral-500 text-neutral-700 hover:text-black dark:text-slate-300 dark:decoration-slate-300 hover:dark:text-slate-200"
                                         href={project.link}
+                                        target="_blank"
+                                        rel="noreferrer"
                                     >
                                         Preview
                                         <LinkSimple
@@ -38,6 +41,8 @@ const Projects = () => {
                                     <a
                                         className="text-base decoration-neutral-500 text-neutral-700 hover:text-black dark:text-slate-300 dark:decoration-slate-300 hover:dark:text-slate-200"
                                         href={project.githubLink}
+                                        target="_blank"
+                                        rel="noreferrer"
                                     >
                                         Github
                                         <GithubLogo
@@ -78,6 +83,16 @@ const Projects = () => {
                         </div>
                     </>
                 ))}
+
+                <a
+                    className="flex items-center justify-center w-full px-12 py-3 text-base font-medium text-white no-underline rounded-full cursor-pointer md:w-auto md:inline-flex bg-midnight dark:bg-gray-200 dark:text-midnight general-ring-state"
+                    href="https://github.com/hoangtrung1801"
+                    target="_blank"
+                    rel="noreferrer"
+                >
+                    View more on github
+                    <ArrowRight className="inline ml-2" />
+                </a>
             </div>
         </Container>
     );
