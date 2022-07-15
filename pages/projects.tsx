@@ -16,9 +16,9 @@ const Projects = () => {
                     A selection of my favorite works.
                 </span>
             </h1>
-            <div className="grid grid-cols-1 gap-x-12 gap-y-24 md:grid-cols-3">
+            <div className="grid grid-cols-1 gap-x-12 gap-y-4 md:gap-y-24 md:grid-cols-3">
                 {projects.map((project) => (
-                    <>
+                    <div key={project.title} className="mb-16 md:mb-0">
                         <div className="col-span-1 py-2">
                             <h2 className="mt-0">{project.title}</h2>
                             <p>{project.description}</p>
@@ -64,15 +64,12 @@ const Projects = () => {
                         </div>
                         <div className="col-span-2">
                             <div className="grid grid-cols-1 gap-4 md:grid-cols-5">
-                                <div className="relative col-span-5 overflow-hidden rounded-lg dark:bg-midnight md:h-[450px] h-auto">
+                                <div className="relative col-span-5 overflow-hidden rounded-lg md:h-[450px] h-auto">
                                     <Image
                                         objectFit="cover"
                                         src={project.imageUrl}
                                         placeholder="blur"
                                         blurDataURL={project.imageUrl}
-                                        // layout="responsive"
-                                        // width={"100%"}
-                                        // height={"100%"}
                                         width={5110}
                                         height={3139}
                                         layout="intrinsic"
@@ -81,7 +78,7 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
-                    </>
+                    </div>
                 ))}
 
                 <a

@@ -119,7 +119,7 @@ const About = () => {
             <div className="mt-12 space-y-6">
                 <h2 className="m-0 text-gray-900 dark:text-white">Education</h2>
                 {/* <p>Here's a brief rundown of my most recent experiences.</p> */}
-                <div className="space-y-2">
+                <div className="space-y-2 overflow-x-auto">
                     {educations.map((education) => (
                         <div
                             key={education.school}
@@ -143,7 +143,7 @@ const About = () => {
             <div className="mt-12 space-y-6">
                 <h2 className="m-0 text-gray-900 dark:text-white">Awards</h2>
                 {/* <p>Here's a brief rundown of my most recent experiences.</p> */}
-                <div className="space-y-2">
+                <div className="space-y-2 overflow-x-auto">
                     {awards.map((award) => (
                         <div
                             key={award.name}
