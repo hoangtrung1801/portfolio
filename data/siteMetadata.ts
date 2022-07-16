@@ -1,14 +1,14 @@
 const siteMetadata = {
-    title: "hoangtrung1801's Portfolio",
+    title: "Hoàng Trung - A software engineer",
     author: "Lê Kim Hoàng Trung",
     name: "Hoàng Trung",
     username: "hoangtrung1801",
     headerTitle: "hoangtrung1801's Portfolio",
     description:
-        "I'm Hoàng Trung. I'm a senior front end developer, blogger and designer. Welcome to my corner of the internet. I'm glad you're here!",
+        "I'm Hoàng Trung. I'm a software engineer, full-stack developer working as a freelancer.",
     language: "en-us",
-    siteUrl: "https://braydoncoyer.dev",
-    siteRepo: "https://github.com/braydoncoyer/braydoncoyer.dev",
+    siteUrl: "https://portfolio-hoangtrung1801.vercel.app/",
+    siteRepo: "https://github.com/hoangtrung1801/portfolio",
     //   siteLogo: "/static/images/bundle_logo.svg",
     avatarImage:
         "https://res.cloudinary.com/hoangtrung1801/image/upload/v1657434332/portfolio/avatar.jpg",
@@ -20,9 +20,6 @@ const siteMetadata = {
     resume: "https://drive.google.com/file/d/17VaKGmS9c0l_hPA3O9Qj7kDJDKB11qoT/view?usp=sharing",
     hashnodeUsername: "hoangtrung1801",
     hashnodeUrl: "https://hoangtrung1801.hashnode.dev/"
-    // analytics: {
-    // plausibleDataDomain: "braydoncoyer.dev"
-    // }
 };
 
 export default siteMetadata;

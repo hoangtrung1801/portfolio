@@ -27,6 +27,21 @@ const Container: React.FC<ContainerProps> = ({
         >
             <Head>
                 <title>{title || siteMetadata.title}</title>
+                <meta name="robots" content="follow, index" />
+                <meta content={siteMetadata.description} name="description" />
+                <meta
+                    property="og:url"
+                    content={`${siteMetadata.siteUrl}${router.asPath}`}
+                />
+                <meta name="application-name" content="&nbsp;" />
+                <meta property="og:type" content={"website"} />
+                <meta property="og:site_name" content="hoangtrung1801" />
+                <meta
+                    property="og:description"
+                    content={siteMetadata.description}
+                />
+                <meta property="og:title" content={siteMetadata.title} />
+                <meta property="og:image" content={siteMetadata.avatarImage} />
             </Head>
             <NavMenu />
             <main
