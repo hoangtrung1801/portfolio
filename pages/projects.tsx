@@ -7,7 +7,7 @@ import { ArrowRight } from "phosphor-react";
 
 const Projects = () => {
     return (
-        <Container title="Projects - Braydon Coyer">
+        <Container title="Projects - hoangtrung1801">
             <h1>
                 <span className="block text-base font-semibold tracking-wide text-center text-teal-500 uppercase dark:text-teal-400">
                     Projects
