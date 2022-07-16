@@ -19,7 +19,7 @@ const projects: ProjectType[] = [
     {
         title: "Croma Hospital API",
         description:
-            "This project was created to provide an API for the website of the online hospital system. It offers a way to properly monitor patients, deliver medications, and...  ",
+            "This project was created to provide an API for the website of the online hospital system. It offers a way to properly monitor patients, deliver medications,...  ",
         githubLink: "https://github.com/hoangtrung1801/croma-hospital-api",
         imageUrl:
             "https://res.cloudinary.com/hoangtrung1801/image/upload/v1657786158/portfolio/project-cromahospital.png"

@@ -57,36 +57,13 @@ function ContactCard({}) {
                 <button
                     className="absolute top-[-13px] right-[3px] md:right-[5px] md:top-[5px] py-0.5 md:py-1 items-center justify-center px-4 bg-indigo-500 hover:bg-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400 text-white rounded-full"
                     type="submit"
+                    disabled
                 >
                     Submit
-                    {/* {form.state === Form.Loading ? (
-                        <LoadingSpinner />
-                    ) : (
-                        "Subscribe"
-                    )} */}
                 </button>
             </form>
-            {/* {form.state === Form.Error ? (
-                <ErrorMessage>{form.message}</ErrorMessage>
-            ) : form.state === Form.Success ? (
-                <SuccessMessage>{form.message}</SuccessMessage>
-            ) : (
-                <p className="mt-6 text-sm">
-                    {`${
-                        subscriberCount > 0
-                            ? subscriberCount.toLocaleString()
-                            : "-"
-                    } subscribers – `}
-                    <a href={siteMetadata.newsletter}>{`${
-                        issuesCount > 0 ? issuesCount.toLocaleString() : "-"
-                    } issues`}</a>
-                </p>
-            )} */}
             <p>
                 <span className="text-sm text-gray">or </span>
-                {/* <a href="" className="text-base">
-                    {siteMetadata.email}
-                </a> */}
                 <span className="my-email">{siteMetadata.email}</span>
             </p>
         </div>
@@ -116,25 +93,13 @@ function InlineContact({}) {
                 <button
                     className="absolute right-[3px] top-[3px] md:right-[5px] md:top-[5px] py-0.5 md:py-1 items-center justify-center px-4 bg-indigo-500 hover:bg-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400 text-white rounded-full"
                     type="submit"
+                    disabled={true}
                 >
                     Submit
-                    {/* {form.state === Form.Loading ? (
-                        <LoadingSpinner />
-                    ) : (
-                        "Subscribe"
-                    )} */}
                 </button>
             </form>
-            {/* {form.state === Form.Error ? (
-                <ErrorMessage>{form.message}</ErrorMessage>
-            ) : form.state === Form.Success ? (
-                <SuccessMessage>{form.message}</SuccessMessage>
-            ) : null} */}
             <p>
                 <span className="text-sm text-gray">or </span>
-                {/* <a href="" className="text-base">
-                    {siteMetadata.email}
-                </a> */}
                 <span className="my-email">{siteMetadata.email}</span>
             </p>
         </div>
