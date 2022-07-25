@@ -18,6 +18,8 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
                 href={`${siteMetadata.hashnodeUrl}/${article.slug}`}
                 target="_blank"
                 rel="noreferrer"
+                data-splitbee-event="Blog view"
+                data-splitbee-event-planType={article.title}
             >
                 <div className="group">
                     <Image
