@@ -7,7 +7,8 @@ const siteMetadata = {
     description:
         "I'm Hoàng Trung. I'm a software engineer, full-stack developer working as a freelancer.",
     language: "en-us",
-    siteUrl: "https://portfolio-hoangtrung1801.vercel.app/",
+    // siteUrl: "https://portfolio-hoangtrung1801.vercel.app/",
+    siteUrl: "https://www.hoangtrung1801.tech",
     siteRepo: "https://github.com/hoangtrung1801/portfolio",
     //   siteLogo: "/static/images/bundle_logo.svg",
     avatarImage:

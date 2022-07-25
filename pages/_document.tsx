@@ -35,6 +35,7 @@ export default function Document(props) {
                     href="/favicon/favicon-16x16.png"
                 />
                 <link rel="manifest" href="/site.webmanifest"></link>
+                <script async src="https://cdn.splitbee.io/sb.js"></script>
             </Head>
             <body className="prose-headings:font-headings">
                 <Main />
