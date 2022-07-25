@@ -19,7 +19,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
                 target="_blank"
                 rel="noreferrer"
                 data-splitbee-event="Blog view"
-                data-splitbee-event-planType={article.title}
+                data-splitbee-event-slug={article.slug}
             >
                 <div className="group">
                     <Image
