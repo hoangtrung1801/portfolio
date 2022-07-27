@@ -45,7 +45,7 @@ const About = () => {
             </h1>
             <p>
                 I’m Lê Kim Hoàng Trung, a software engineer, full-stack
-                developer. I am a Vietnamese 🇻🇳{" "}
+                developer. I am a Vietnamese{" "}
                 <Image
                     className="-mb-[3px]"
                     src={"/images/vietnam.svg"}
@@ -82,9 +82,11 @@ const About = () => {
                 <div className="col-span-3">
                     <p>
                         Technologies and tools I'm currently exploring and
-                        intersted about <a href="#">React</a>,{" "}
-                        <a href="#">Next.js</a>, <a href="#">Typescript</a>,{" "}
-                        <a href="#">Nodejs</a>, <a href="#">Expressjs</a>,{" "}
+                        intersted about <a href="https://reactjs.org">React</a>,{" "}
+                        <a href="https://nextjs.org/">Next.js</a>,{" "}
+                        <a href="https://www.typescriptlang.org/">Typescript</a>
+                        , <a href="https://nodejs.org/">Nodejs</a>,{" "}
+                        <a href="https://expressjs.com/">Expressjs</a>{" "}
                     </p>
                     <p>
                         You can find me on{" "}

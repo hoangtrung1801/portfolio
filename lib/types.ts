@@ -100,3 +100,10 @@ export type Language =
     | "typescript"
     | "wasm"
     | "yaml";
+export interface ProjectType {
+    title: string;
+    description: string;
+    link?: string;
+    imageUrl: string;
+    githubLink?: string;
+}

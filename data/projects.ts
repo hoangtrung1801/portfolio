@@ -1,10 +1,4 @@
-interface ProjectType {
-    title: string;
-    description: string;
-    link?: string;
-    imageUrl: string;
-    githubLink?: string;
-}
+import { ProjectType } from "lib/types";
 
 const projects: ProjectType[] = [
     {
@@ -14,7 +8,7 @@ const projects: ProjectType[] = [
         githubLink: "https://github.com/hoangtrung1801/portfolio",
         link: "https://portfolio-hoangtrung1801.vercel.app/",
         imageUrl:
-            "https://res.cloudinary.com/hoangtrung1801/image/upload/v1657786087/portfolio/project-portfolio.png"
+            "https://res.cloudinary.com/hoangtrung1801/image/upload/v1658912721/portfolio/project-portfolio.png"
     },
     {
         title: "Croma Hospital API",
@@ -29,7 +23,7 @@ const projects: ProjectType[] = [
         description:
             "This website is an ecommerce website that combines fundraising and environmental selling.",
         githubLink: "https://github.com/hoangtrung1801/bwd2022",
-        link: "bwd2022.vercel.app",
+        link: "https://bwd2022.vercel.app",
         imageUrl:
             "https://res.cloudinary.com/hoangtrung1801/image/upload/v1657786568/portfolio/project-fundraising-selling-website_qvtoao.png"
     },
