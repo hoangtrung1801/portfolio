@@ -1,5 +1,9 @@
 {
   "private": true,
+  "author": "hoangtrung1801",
+  "description": "This is a website that I made to display my background, skills, and projects. In addition, this is a place I will post my blogs in the future as blogger.",
+  "version": "2.0",
+  "repository": "https://github.com/hoangtrung1801/portfolio",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
