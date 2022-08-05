@@ -1,4 +1,4 @@
-# LAVIE - BWD 2022 👋
+# hoangtrung1801's Portfolio 👋
 ![Version](https://img.shields.io/badge/version-2.0-blue.svg?cacheSeconds=2592000&style=for-the-badge)
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
