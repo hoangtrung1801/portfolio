@@ -3,18 +3,18 @@ import Tag from "components/Tag";
 import Container from "layouts/Container";
 import getAllPosts from "lib/getAllPosts";
 import { GetStaticProps, NextPage } from "next";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const tags = [
     "all",
-    "programming",
-    "react",
+    // "programming",
+    "reactjs",
     "javascript",
     "nodejs",
     "express",
-    "html",
-    "css",
-    "web"
+    "nextjs",
+    "tailwind-css",
+    "web-development"
 ];
 
 interface BlogProps {
@@ -23,6 +23,18 @@ interface BlogProps {
 
 const Blog: NextPage<BlogProps> = ({ posts }) => {
     const [selectedTag, setSelectedTag] = useState<string>("all");
+    const [selectedPosts, setSelectedPosts] = useState<Array<any>>(posts);
+
+    useEffect(() => {
+        setSelectedPosts(
+            posts.filter((post) => {
+                const tags = post.tags.map((tag) => tag.slug);
+                return selectedTag === "all"
+                    ? true
+                    : tags.includes(selectedTag);
+            })
+        );
+    }, [posts, selectedTag]);
 
     return (
         <Container title="Blog - hoangtrung1801">
@@ -45,6 +57,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
                     </div>
                 ))}
             </div>
+            {/* Show when have no article */}
             {!posts && (
                 <div className="w-full mx-auto rounded-lg bg-[#F8FAFC] dark:bg-midnight p-4">
                     <p className="flex items-center justify-center text-2xl">
@@ -86,14 +99,13 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
                     </p>
                 </div>
             )}
-            {posts && <ArticleList articles={posts} />}
+            {posts && <ArticleList articles={selectedPosts} />}
         </Container>
     );
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
     const posts = await getAllPosts();
-    console.log(posts);
 
     return {
         props: {

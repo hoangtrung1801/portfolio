@@ -25,6 +25,7 @@ export const GET_POST_DETAILED = gql`
             title
             tags {
                 name
+                slug
             }
         }
     }
