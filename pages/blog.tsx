@@ -1,10 +1,8 @@
 import ArticleList from "components/ArticleList";
 import Tag from "components/Tag";
 import Container from "layouts/Container";
-import client from "lib/apollo-client";
 import getAllPosts from "lib/getAllPosts";
-import { GET_POSTS } from "lib/queries";
-import { GetServerSideProps, NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import { useState } from "react";
 
 const tags = [
@@ -93,13 +91,16 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
     );
 };
 
-export const getServerSideProps: GetServerSideProps = async (context) => {
+export const getStaticProps: GetStaticProps = async (context) => {
     const posts = await getAllPosts();
+    console.log(posts);
 
     return {
         props: {
             posts
-        }
+        },
+        // generate every 12h
+        revalidate: 60 * 60 * 12
     };
 };
 
