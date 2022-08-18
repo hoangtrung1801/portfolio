@@ -16,14 +16,14 @@ const Snippets = ({ snippets }) => {
             </h1>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:grid-cols-3 prose-headings:m-0 prose-p:mb-2">
                 {snippets.map((snippet) => (
-                    <Link key={snippet.slug} href={`/snippets/${snippet.Slug}`}>
-                        <div className="w-full h-44 border border-gray-300 p-4 flex flex-col group  transform  transition-all hover:scale-105 hover:shadow-lg cursor-pointer">
+                    <Link key={snippet.Slug} href={`/snippets/${snippet.Slug}`}>
+                        <div className="w-full h-44 p-4 flex flex-col group border border-gray-100 dark:border-gray-500 transform transition-all hover:scale-105 shadow hover:shadow-lg rounded-lg cursor-pointer">
                             <h3>{snippet.Name}</h3>
                             <p>{snippet.Description}</p>
                             <div className="mt-auto space-x-2 flex flex-wrap">
                                 {snippet.Tags.map((tag) => (
                                     <div
-                                        key={tag}
+                                        key={`${snippet.slug}/tag`}
                                         className="border border-teal-500 rounded-lg px-2 text-teal-500 hover:bg-teal-500 hover:text-white transition-all duration-400"
                                     >
                                         <span className="uppercase text-sm font-headings ">
@@ -44,7 +44,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     const snippets = await getAllSnippets();
 
     return {
-        props: { snippets }
+        props: { snippets },
+        revalidate: 60 * 60 * 12
     };
 };
 

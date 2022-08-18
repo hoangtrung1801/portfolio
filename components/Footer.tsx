@@ -14,7 +14,8 @@ const navigation = {
         { name: "Blog", href: "/blog" }
     ],
     specifics: [
-        { name: "Stats", href: "/stats" }
+        // { name: "Stats", href: "/stats" },
+        { name: "Snippets", href: "/snippets" }
         // { name: 'Activity', href: '/activity' },
         // { name: "Community wall", href: "/community-wall" },
         // { name: "Toolbox", href: "/toolbox" }
