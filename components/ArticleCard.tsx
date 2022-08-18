@@ -33,9 +33,9 @@ const ArticleCard: React.FC<ArticleCardProps> = ({ article }) => {
                         layout="intrinsic"
                         alt={"article cover"}
                     />
-                    <div className="text-left w-full">
+                    <div className="w-full text-left">
                         <h3 className="mt-2 text-2xl">{article.title}</h3>
-                        <span className="text-base font-semibold flex items-center">
+                        <span className="flex items-center text-base font-semibold">
                             {new Date(article.dateAdded).toLocaleDateString(
                                 "en-us",
                                 {

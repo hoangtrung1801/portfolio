@@ -10,7 +10,7 @@ const Tag: React.FC<TagProps> = ({ tag, cb, activeTag }) => {
             onClick={() => cb()}
             className={`rounded-full px-6 py-1 ${
                 activeTag === tag
-                    ? "ring-2 ring-teal-500 text-teal-500"
+                    ? "text-teal-500 ring-2 ring-teal-500"
                     : "ring-2 ring-gray-300"
             } hover:ring-2 hover:ring-teal-500 `}
         >

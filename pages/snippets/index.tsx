@@ -7,26 +7,26 @@ const Snippets = ({ snippets }) => {
     return (
         <Container title="Snippets - hoangtrung1801">
             <h1>
-                <span className="block text-base font-semibold tracking-wide text-center text-teal-500 uppercase dark:text-teal-400">
+                <span className="block text-center text-base font-semibold uppercase tracking-wide text-teal-500 dark:text-teal-400">
                     My Snippets
                 </span>
-                <span className="block max-w-2xl mx-auto mt-2 text-4xl font-bold leading-10 text-center sm:text-5xl">
+                <span className="mx-auto mt-2 block max-w-2xl text-center text-4xl font-bold leading-10 sm:text-5xl">
                     All the code snippets I collected
                 </span>
             </h1>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:grid-cols-3 prose-headings:m-0 prose-p:mb-2">
+            <div className="grid grid-cols-1 gap-4 prose-headings:m-0 prose-p:mb-2 sm:grid-cols-2 lg:grid-cols-3">
                 {snippets.map((snippet) => (
                     <Link key={snippet.Slug} href={`/snippets/${snippet.Slug}`}>
-                        <div className="w-full h-44 p-4 flex flex-col group border border-gray-100 dark:border-gray-500 transform transition-all hover:scale-105 shadow hover:shadow-lg rounded-lg cursor-pointer">
+                        <div className="group flex h-44 w-full transform cursor-pointer flex-col rounded-lg border border-gray-100 p-4 shadow transition-all hover:scale-105 hover:shadow-lg dark:border-gray-500">
                             <h3>{snippet.Name}</h3>
                             <p>{snippet.Description}</p>
-                            <div className="mt-auto space-x-2 flex flex-wrap">
+                            <div className="mt-auto flex flex-wrap space-x-2">
                                 {snippet.Tags.map((tag) => (
                                     <div
                                         key={`${snippet.slug}/tag`}
-                                        className="border border-teal-500 rounded-lg px-2 text-teal-500 hover:bg-teal-500 hover:text-white transition-all duration-400"
+                                        className="duration-400 rounded-lg border border-teal-500 px-2 text-teal-500 transition-all hover:bg-teal-500 hover:text-white"
                                     >
-                                        <span className="uppercase text-sm font-headings ">
+                                        <span className="font-headings text-sm uppercase ">
                                             {tag}
                                         </span>
                                     </div>

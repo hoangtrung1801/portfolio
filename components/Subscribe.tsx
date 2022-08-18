@@ -10,12 +10,12 @@ function SubscribeCard({
     issuesCount
 }) {
     return (
-        <div className="border border-gray-200 rounded-lg p-6 my-4 w-full dark:border-gray-700 bg-[#F8FAFC] dark:bg-midnight">
-            <h3 className="flex items-center mt-2 font-bold text-gray-900 md:text-2xl dark:text-gray-100">
+        <div className="my-4 w-full rounded-lg border border-gray-200 bg-[#F8FAFC] p-6 dark:border-gray-700 dark:bg-midnight">
+            <h3 className="mt-2 flex items-center font-bold text-gray-900 dark:text-gray-100 md:text-2xl">
                 Updates delivered to your inbox!
                 <span>
                     <svg
-                        className="w-6 h-6 ml-1 md:w-7 md:h-7"
+                        className="ml-1 h-6 w-6 md:h-7 md:w-7"
                         fill="none"
                         viewBox="0 0 24 24"
                     >
@@ -43,7 +43,7 @@ function SubscribeCard({
             </p>
             <p className="mt-0">
                 As a thank you, I{"'"}ll also send you a{" "}
-                <span className="text-indigo-500 font-fancy dark:text-indigo-400">
+                <span className="font-fancy text-indigo-500 dark:text-indigo-400">
                     Free CSS
                 </span>{" "}
                 tutorial!
@@ -51,7 +51,7 @@ function SubscribeCard({
             <p>No spam - unsubscribe at any time!</p>
 
             <form
-                className="relative my-4 space-y-4 md:space-y-0 md:flex"
+                className="relative my-4 space-y-4 md:flex md:space-y-0"
                 onSubmit={handleSubscribe}
             >
                 <input
@@ -60,10 +60,10 @@ function SubscribeCard({
                     type="email"
                     autoComplete="email"
                     required
-                    className="block w-full px-4 bg-white border-gray-300 rounded-full shadow-sm dark:bg-dark md:py-3 focus:ring-midnight dark:focus:ring-gray-100 sm:text-sm md:text-base dark:border-gray-400"
+                    className="block w-full rounded-full border-gray-300 bg-white px-4 shadow-sm focus:ring-midnight dark:border-gray-400 dark:bg-dark dark:focus:ring-gray-100 sm:text-sm md:py-3 md:text-base"
                 />
                 <button
-                    className="absolute top-[-13px] right-[3px] md:right-[5px] md:top-[5px] py-0.5 md:py-1 items-center justify-center px-4 bg-indigo-500 hover:bg-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400 text-white rounded-full"
+                    className="absolute top-[-13px] right-[3px] items-center justify-center rounded-full bg-indigo-500 py-0.5 px-4 text-white hover:bg-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400 md:right-[5px] md:top-[5px] md:py-1"
                     type="submit"
                 >
                     {/* {form.state === Form.Loading ? (
@@ -96,14 +96,14 @@ function SubscribeCard({
 function InlineSubscribe({ handleSubscribe, form, inputRef }) {
     return (
         <div>
-            <h3 className="my-0 text-sm font-semibold tracking-wider uppercase">
+            <h3 className="my-0 text-sm font-semibold uppercase tracking-wider">
                 Newsletter
             </h3>
             <p className="mt-4 text-base ">
                 Get new articles delivered to your inbox!
             </p>
             <form
-                className="relative flex my-4 space-y-0"
+                className="relative my-4 flex space-y-0"
                 onSubmit={handleSubscribe}
             >
                 <label htmlFor="email-address" className="sr-only">
@@ -115,10 +115,10 @@ function InlineSubscribe({ handleSubscribe, form, inputRef }) {
                     type="email"
                     autoComplete="email"
                     required
-                    className="block w-full px-5 bg-white border-gray-300 rounded-full shadow-sm dark:bg-dark md:py-3 focus:ring-midnight dark:focus:ring-gray-100 sm:text-sm md:text-base dark:border-gray-400"
+                    className="block w-full rounded-full border-gray-300 bg-white px-5 shadow-sm focus:ring-midnight dark:border-gray-400 dark:bg-dark dark:focus:ring-gray-100 sm:text-sm md:py-3 md:text-base"
                 />
                 <button
-                    className="absolute right-[3px] top-[3px] md:right-[5px] md:top-[5px] py-0.5 md:py-1 items-center justify-center px-4 bg-indigo-500 hover:bg-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400 text-white rounded-full"
+                    className="absolute right-[3px] top-[3px] items-center justify-center rounded-full bg-indigo-500 py-0.5 px-4 text-white hover:bg-indigo-600 dark:bg-indigo-500 dark:hover:bg-indigo-400 md:right-[5px] md:top-[5px] md:py-1"
                     type="submit"
                 >
                     {/* {form.state === Form.Loading ? (

@@ -32,7 +32,7 @@ const navigation = {
             href: siteMetadata.linkedin,
             icon: (props) => (
                 <svg
-                    className="w-7 h-7 transform hover:rotate-[-4deg] transition"
+                    className="h-7 w-7 transform transition hover:rotate-[-4deg]"
                     viewBox="0 0 24 24"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,7 @@ const navigation = {
             href: siteMetadata.github,
             icon: (props) => (
                 <svg
-                    className="w-7 h-7 transform hover:rotate-[-4deg] transition"
+                    className="h-7 w-7 transform transition hover:rotate-[-4deg]"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
                     viewBox="0 0 256 256"
@@ -134,7 +134,7 @@ const navigation = {
             href: siteMetadata.facebook,
             icon: (props) => (
                 <svg
-                    className="w-7 h-7 transform hover:rotate-[-4deg] transition"
+                    className="h-7 w-7 transform transition hover:rotate-[-4deg]"
                     xmlns="http://www.w3.org/2000/svg"
                     fill="currentColor"
                     viewBox="0 0 256 256"
@@ -184,13 +184,13 @@ const Footer = () => {
                     <div className="grid grid-cols-2 gap-8 xl:col-span-2">
                         <div className="md:grid md:grid-cols-2 md:gap-8">
                             <div>
-                                <h3 className="text-sm font-semibold tracking-wider uppercase">
+                                <h3 className="text-sm font-semibold uppercase tracking-wider">
                                     General
                                 </h3>
                                 <div role="list" className="mt-4 space-y-4">
                                     {navigation.general.map((item) => (
                                         <Link key={item.name} href={item.href}>
-                                            <a className="block text-base text-gray-600 no-underline hover:text-gray-800 dark:hover:text-gray-300 dark:text-gray-400 hover:underline">
+                                            <a className="block text-base text-gray-600 no-underline hover:text-gray-800 hover:underline dark:text-gray-400 dark:hover:text-gray-300">
                                                 {item.name}
                                             </a>
                                         </Link>
@@ -198,13 +198,13 @@ const Footer = () => {
                                 </div>
                             </div>
                             <div className="mt-12 md:mt-0">
-                                <h3 className="text-sm font-semibold tracking-wider uppercase">
+                                <h3 className="text-sm font-semibold uppercase tracking-wider">
                                     Specifics
                                 </h3>
                                 <div role="list" className="mt-4 space-y-4">
                                     {navigation.specifics.map((item) => (
                                         <Link key={item.name} href={item.href}>
-                                            <a className="block text-base text-gray-600 no-underline hover:text-gray-800 dark:hover:text-gray-300 dark:text-gray-400 hover:underline">
+                                            <a className="block text-base text-gray-600 no-underline hover:text-gray-800 hover:underline dark:text-gray-400 dark:hover:text-gray-300">
                                                 {item.name}
                                             </a>
                                         </Link>
@@ -214,13 +214,13 @@ const Footer = () => {
                         </div>
                         <div className="md:grid md:grid-cols-2 md:gap-8">
                             <div>
-                                <h3 className="text-sm font-semibold tracking-wider uppercase">
+                                <h3 className="text-sm font-semibold uppercase tracking-wider">
                                     Extra
                                 </h3>
                                 <div role="list" className="mt-4 space-y-4">
                                     {navigation.extra.map((item) => (
                                         <Link key={item.name} href={item.href}>
-                                            <a className="block text-base text-gray-600 no-underline hover:text-gray-800 dark:hover:text-gray-300 dark:text-gray-400 hover:underline">
+                                            <a className="block text-base text-gray-600 no-underline hover:text-gray-800 hover:underline dark:text-gray-400 dark:hover:text-gray-300">
                                                 {item.name}
                                             </a>
                                         </Link>
@@ -242,19 +242,19 @@ const Footer = () => {
                         {/* <Subscribe size={SubscribeSize.SMALL} /> */}
                     </div>
                 </div>
-                <div className="flex items-center justify-between mt-12">
-                    <div className="flex items-center order-2 space-x-6">
+                <div className="mt-12 flex items-center justify-between">
+                    <div className="order-2 flex items-center space-x-6">
                         {navigation.social.map((item) => (
                             <a
                                 key={item.name}
                                 href={item.href}
-                                className="text-gray-600 dark:text-gray-400 important"
+                                className="important text-gray-600 dark:text-gray-400"
                                 target="_blank"
                                 rel="noreferrer"
                             >
                                 <span className="sr-only">{item.name}</span>
                                 <item.icon
-                                    className="w-6 h-6"
+                                    className="h-6 w-6"
                                     aria-hidden="true"
                                 />
                             </a>

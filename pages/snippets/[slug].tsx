@@ -9,13 +9,13 @@ const SnippetPage = ({ snippet, snippetPage }) => {
     return (
         <Container title={""}>
             <h1>
-                <span className="block text-base font-semibold tracking-wide text-center text-teal-500 uppercase dark:text-teal-400">
+                <span className="block text-center text-base font-semibold uppercase tracking-wide text-teal-500 dark:text-teal-400">
                     Snippet
                 </span>
-                <span className="block max-w-2xl mx-auto mt-2 text-4xl font-bold leading-10 text-center sm:text-5xl">
+                <span className="mx-auto mt-2 block max-w-2xl text-center text-4xl font-bold leading-10 sm:text-5xl">
                     {snippet.Name}
                 </span>
-                <span className="block mx-auto mt-1 text-sm text-gray-500 dark:text-gray-400 text-center leading-10 font-medium">
+                <span className="mx-auto mt-1 block text-center text-sm font-medium leading-10 text-gray-500 dark:text-gray-400">
                     {snippet.Description}
                 </span>
             </h1>

@@ -39,10 +39,10 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
     return (
         <Container title="Blog - hoangtrung1801">
             <h1>
-                <span className="block text-base font-semibold tracking-wide text-center text-teal-500 uppercase dark:text-teal-400">
+                <span className="block text-center text-base font-semibold uppercase tracking-wide text-teal-500 dark:text-teal-400">
                     My Blog
                 </span>
-                <span className="block max-w-2xl mx-auto mt-2 text-4xl font-bold leading-10 text-center sm:text-5xl">
+                <span className="mx-auto mt-2 block max-w-2xl text-center text-4xl font-bold leading-10 sm:text-5xl">
                     Insightful and helpful content curated for you.
                 </span>
             </h1>
@@ -59,12 +59,12 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
             </div>
             {/* Show when have no article */}
             {!posts && (
-                <div className="w-full mx-auto rounded-lg bg-[#F8FAFC] dark:bg-midnight p-4">
+                <div className="mx-auto w-full rounded-lg bg-[#F8FAFC] p-4 dark:bg-midnight">
                     <p className="flex items-center justify-center text-2xl">
                         No articles found{" "}
                         <span>
                             <svg
-                                className="ml-3 w-7 h-7"
+                                className="ml-3 h-7 w-7"
                                 fill="none"
                                 viewBox="0 0 24 24"
                             >

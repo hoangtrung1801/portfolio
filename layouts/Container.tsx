@@ -21,7 +21,7 @@ const Container: React.FC<ContainerProps> = ({
 
     return (
         <div
-            className={`bg-white dark:bg-dark min-h-screen ${
+            className={`min-h-screen bg-white dark:bg-dark ${
                 showCircles && "overflow-hidden"
             }`}
         >
@@ -45,16 +45,16 @@ const Container: React.FC<ContainerProps> = ({
             </Head>
             <NavMenu />
             <main
-                className={`flex flex-col mx-auto max-w-6xl justify-center px-4 bg-white dark:bg-dark prose prose-lg dark:prose-dark relative`}
+                className={`prose prose-lg relative mx-auto flex max-w-6xl flex-col justify-center bg-white px-4 dark:prose-dark dark:bg-dark`}
             >
                 {showCircles && (
                     <div className="absolute top-0 left-0 right-0">
-                        <div className="absolute top-0 overflow-visible opacity-50 dark:opacity-30 left-16">
-                            <div className="mix-blend-multiply absolute w-[700px] h-[900px] rounded-[40rem] circle-obj"></div>
+                        <div className="absolute top-0 left-16 overflow-visible opacity-50 dark:opacity-30">
+                            <div className="circle-obj absolute h-[900px] w-[700px] rounded-[40rem] mix-blend-multiply"></div>
                         </div>
 
-                        <div className="absolute overflow-visible opacity-50 dark:opacity-30 top-28 left-52">
-                            <div className="mix-blend-multiply absolute w-[600px] h-[600px] rounded-[40rem] circle-obj2"></div>
+                        <div className="absolute top-28 left-52 overflow-visible opacity-50 dark:opacity-30">
+                            <div className="circle-obj2 absolute h-[600px] w-[600px] rounded-[40rem] mix-blend-multiply"></div>
                         </div>
                     </div>
                 )}

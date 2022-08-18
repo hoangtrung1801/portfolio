@@ -1,48 +1,50 @@
 {
-  "private": true,
-  "author": "hoangtrung1801",
-  "description": "This is a website that I made to display my background, skills, and projects. In addition, this is a place I will post my blogs in the future as blogger.",
-  "version": "2.0",
-  "repository": "https://github.com/hoangtrung1801/portfolio",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "check-types": "tsc --pretty --noEmit",
-    "check-lint": "next lint",
-    "prepare": "husky install"
-  },
-  "dependencies": {
-    "@apollo/client": "^3.6.9",
-    "@headlessui/react": "^1.6.5",
-    "@notionhq/client": "^2.1.1",
-    "@tailwindcss/typography": "^0.5.2",
-    "dotenv": "^16.0.1",
-    "framer-motion": "^6.4.3",
-    "graphql": "^16.5.0",
-    "next": "latest",
-    "next-themes": "^0.2.0",
-    "nextjs-progressbar": "^0.0.14",
-    "phosphor-react": "^1.4.1",
-    "react": "18.1.0",
-    "react-dom": "18.1.0",
-    "react-notion": "^0.10.0"
-  },
-  "devDependencies": {
-    "@types/node": "^18.7.6",
-    "@types/prismjs": "^1.26.0",
-    "@types/react": "18.0.9",
-    "@types/react-dom": "18.0.5",
-    "autoprefixer": "^10.4.7",
-    "eslint": "^8.18.0",
-    "eslint-config-next": "^12.1.6",
-    "husky": "^8.0.0",
-    "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.2",
-    "typescript": "4.7.2"
-  },
-  "prettier": {
-    "tabWidth": 4,
-    "trailingComma": "none"
-  }
+    "private": true,
+    "author": "hoangtrung1801",
+    "description": "This is a website that I made to display my background, skills, and projects. In addition, this is a place I will post my blogs in the future as blogger.",
+    "version": "2.0",
+    "repository": "https://github.com/hoangtrung1801/portfolio",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "check-types": "tsc --pretty --noEmit",
+        "check-lint": "next lint",
+        "prepare": "husky install"
+    },
+    "dependencies": {
+        "@apollo/client": "^3.6.9",
+        "@headlessui/react": "^1.6.5",
+        "@notionhq/client": "^2.1.1",
+        "@tailwindcss/typography": "^0.5.2",
+        "dotenv": "^16.0.1",
+        "framer-motion": "^6.4.3",
+        "graphql": "^16.5.0",
+        "next": "latest",
+        "next-themes": "^0.2.0",
+        "nextjs-progressbar": "^0.0.14",
+        "phosphor-react": "^1.4.1",
+        "react": "18.1.0",
+        "react-dom": "18.1.0",
+        "react-notion": "^0.10.0"
+    },
+    "devDependencies": {
+        "@types/node": "^18.7.6",
+        "@types/prismjs": "^1.26.0",
+        "@types/react": "18.0.9",
+        "@types/react-dom": "18.0.5",
+        "autoprefixer": "^10.4.7",
+        "eslint": "^8.18.0",
+        "eslint-config-next": "^12.1.6",
+        "husky": "^8.0.0",
+        "postcss": "^8.4.14",
+        "prettier": "^2.7.1",
+        "prettier-plugin-tailwindcss": "^0.1.13",
+        "tailwindcss": "^3.1.2",
+        "typescript": "4.7.2"
+    },
+    "prettier": {
+        "tabWidth": 4,
+        "trailingComma": "none"
+    }
 }

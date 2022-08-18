@@ -1,4 +1,5 @@
 # hoangtrung1801's Portfolio 👋
+
 ![Version](https://img.shields.io/badge/version-2.0-blue.svg?cacheSeconds=2592000&style=for-the-badge)
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
@@ -15,11 +16,13 @@
 ### ✨ [Demo](https://hoangtrung1801.tech)
 
 ## Run
+
 Setup your enviroment variables like file .env.example
 
 ```sh
 yarn install
 ```
+
 ```sh
 yarn && yarn preview
 ```
@@ -28,7 +31,7 @@ yarn && yarn preview
 
 👤 **hoangtrung1801**
 
-* Github: [@hoangtrung1801](https://github.com/hoangtrung1801)
+-   Github: [@hoangtrung1801](https://github.com/hoangtrung1801)
 
 ⭐️ Thank you [@braydoncoyer](https://github.com/braydoncoyer) for inspiring from your portfolio.
 
@@ -36,5 +39,4 @@ yarn && yarn preview
 
 Give a ⭐️ if this project helped you!
 
-
-***
+---

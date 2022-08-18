@@ -8,7 +8,7 @@ interface ArticleListProps {
 
 const ArticleList: React.FC<ArticleListProps> = ({ articles }) => {
     return (
-        <div className="list-none grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid list-none grid-cols-1 gap-8 md:grid-cols-2">
             {articles.map((article) => (
                 <ArticleCard key={article.title} article={article} />
             ))}

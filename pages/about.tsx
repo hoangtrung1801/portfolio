@@ -36,10 +36,10 @@ const About = () => {
     return (
         <Container title="About Me - hoangtrung1801">
             <h1>
-                <span className="block text-base font-semibold tracking-wide text-center text-teal-500 uppercase dark:text-teal-400">
+                <span className="block text-center text-base font-semibold uppercase tracking-wide text-teal-500 dark:text-teal-400">
                     About me
                 </span>
-                <span className="block max-w-2xl mx-auto mt-2 text-4xl font-bold leading-10 text-center sm:text-5xl">
+                <span className="mx-auto mt-2 block max-w-2xl text-center text-4xl font-bold leading-10 sm:text-5xl">
                     Here's my story.
                 </span>
             </h1>
@@ -106,9 +106,9 @@ const About = () => {
                     </p>
                 </div>
             </div>
-            <div className="inline-flex w-full md:w-auto mt-4">
+            <div className="mt-4 inline-flex w-full md:w-auto">
                 <a
-                    className="items-center justify-center w-full px-4 py-3 text-sm font-medium text-center text-white no-underline rounded-full md:text-xl md:px-12 bg-midnight dark:bg-gray-200 dark:text-midnight general-ring-state"
+                    className="general-ring-state w-full items-center justify-center rounded-full bg-midnight px-4 py-3 text-center text-sm font-medium text-white no-underline dark:bg-gray-200 dark:text-midnight md:px-12 md:text-xl"
                     href={siteMetadata.resume}
                     target="_blank"
                     rel="noreferrer"
@@ -116,7 +116,7 @@ const About = () => {
                     View my resume
                 </a>
             </div>
-            <hr className="my-16 w-full border-none text-center h-10 before:content-['∿∿∿'] before:text-[#D1D5DB] before:text-2xl"></hr>
+            <hr className="my-16 h-10 w-full border-none text-center before:text-2xl before:text-[#D1D5DB] before:content-['∿∿∿']"></hr>
             <div className="flex justify-center">{/* <Ad /> */}</div>
             <div className="mt-12 space-y-6">
                 <h2 className="m-0 text-gray-900 dark:text-white">Education</h2>
@@ -125,12 +125,12 @@ const About = () => {
                     {educations.map((education) => (
                         <div
                             key={education.school}
-                            className="flex items-center space-x-3 group"
+                            className="group flex items-center space-x-3"
                         >
-                            <span className="flex-none text-gray-900 gover-hover:underline dark:text-white max-w-[85%]">
+                            <span className="gover-hover:underline max-w-[85%] flex-none text-gray-900 dark:text-white">
                                 {education.school}
                             </span>
-                            <span className="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-700"></span>
+                            <span className="w-full shrink border-t border-dashed border-gray-300 dark:border-gray-700"></span>
                             <span className="flex-none">{education.major}</span>
                             <span className="flex-none">
                                 {education.duration}
@@ -140,7 +140,7 @@ const About = () => {
                 </div>
             </div>
 
-            <hr className="my-16 w-full border-none text-center h-10 before:content-['∿∿∿'] before:text-[#D1D5DB] before:text-2xl"></hr>
+            <hr className="my-16 h-10 w-full border-none text-center before:text-2xl before:text-[#D1D5DB] before:content-['∿∿∿']"></hr>
 
             <div className="mt-12 space-y-6">
                 <h2 className="m-0 text-gray-900 dark:text-white">Awards</h2>
@@ -149,12 +149,12 @@ const About = () => {
                     {awards.map((award) => (
                         <div
                             key={award.name}
-                            className="flex items-center space-x-3 group"
+                            className="group flex items-center space-x-3"
                         >
-                            <span className="flex-none text-gray-900 gover-hover:underline dark:text-white max-w-[85%]">
+                            <span className="gover-hover:underline max-w-[85%] flex-none text-gray-900 dark:text-white">
                                 {award.name}
                             </span>
-                            <span className="w-full border-t border-gray-300 border-dashed shrink dark:border-gray-700"></span>
+                            <span className="w-full shrink border-t border-dashed border-gray-300 dark:border-gray-700"></span>
                             <span className="flex-none">{award.year}</span>
                         </div>
                     ))}

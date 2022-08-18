@@ -14,8 +14,8 @@ const Home: NextPage = () => {
         <Container showCircles>
             <div>
                 <div>
-                    <div className="grid items-center grid-cols-1 mt-12 text-center md:mt-24 md:text-left md:grid-cols-6">
-                        <h1 className="order-2 col-span-5 text-4xl leading-tight md:leading-normal md:order-1 sm:text-5xl">
+                    <div className="mt-12 grid grid-cols-1 items-center text-center md:mt-24 md:grid-cols-6 md:text-left">
+                        <h1 className="order-2 col-span-5 text-4xl leading-tight sm:text-5xl md:order-1 md:leading-normal">
                             I{"'"}m{" "}
                             <span className="text-teal-500 dark:text-teal-400">
                                 {siteMetadata.name}

@@ -18,12 +18,12 @@ function NavItem({ href, text }) {
                     isActive
                         ? "font-bold text-gray-900 dark:text-gray-200"
                         : "font-normal text-gray-600 dark:text-gray-400"
-                } 'hidden md:inline-block p-1 sm:px-6 sm:py-2 rounded-full hover:bg-gray-100 dark:hover:bg-midnight transition-all`}
+                } 'hidden rounded-full p-1 transition-all hover:bg-gray-100 dark:hover:bg-midnight sm:px-6 sm:py-2 md:inline-block`}
             >
                 <span
                     className={`${
                         isActive
-                            ? "py-1 border-b-2 border-teal-400 dark:border-teal-500"
+                            ? "border-b-2 border-teal-400 py-1 dark:border-teal-500"
                             : "capsize"
                     }`}
                 >
@@ -43,7 +43,7 @@ const NavMenu = () => {
 
     return (
         <div className="relative z-50 text-gray-900 dark:text-gray-100">
-            <div className="flex items-center justify-between max-w-6xl px-4 py-6 mx-auto sm:px-6 md:space-x-10">
+            <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-6 sm:px-6 md:space-x-10">
                 <div className="flex justify-start lg:w-0 lg:flex-1">
                     <span className="sr-only">Profile Picture</span>
                     <Image
@@ -60,7 +60,7 @@ const NavMenu = () => {
                     className="-my-2 -mr-2 md:hidden"
                     onClick={() => setIsOpen(true)}
                 >
-                    <div className="bg-gray-200 dark:bg-midnight text-gray-600 dark:text-gray-300 rounded-full p-3.5 inline-flex items-center justify-center hover:text-gray-700 hover:bg-gray-300 cursor-pointer focus:outline-none general-ring-state">
+                    <div className="general-ring-state inline-flex cursor-pointer items-center justify-center rounded-full bg-gray-200 p-3.5 text-gray-600 hover:bg-gray-300 hover:text-gray-700 focus:outline-none dark:bg-midnight dark:text-gray-300">
                         <span className="sr-only">Open menu</span>
                         <svg
                             width="24"
@@ -99,11 +99,11 @@ const NavMenu = () => {
                     <NavItem href="/blog" text="Blog" />
                     {/* <NavItem href="/community-wall" text="Community wall" /> */}
                 </nav>
-                <div className="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
+                <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
                     <button
                         aria-label="Toggle Dark Mode"
                         type="button"
-                        className="flex items-center justify-center w-12 h-12 bg-gray-200 rounded-full dark:bg-midnight general-ring-state"
+                        className="general-ring-state flex h-12 w-12 items-center justify-center rounded-full bg-gray-200 dark:bg-midnight"
                         onClick={() =>
                             setTheme(
                                 resolvedTheme === "dark" ? "light" : "dark"
@@ -114,7 +114,7 @@ const NavMenu = () => {
                             <div>
                                 {resolvedTheme === "dark" ? (
                                     <svg
-                                        className="w-7 h-7"
+                                        className="h-7 w-7"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                     >
@@ -186,7 +186,7 @@ const NavMenu = () => {
                                     </svg>
                                 ) : (
                                     <svg
-                                        className="w-7 h-7"
+                                        className="h-7 w-7"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                     >
@@ -221,15 +221,15 @@ const NavMenu = () => {
                 >
                     <Dialog.Overlay className="fixed inset-0 bg-black/20 backdrop-blur-sm dark:bg-gray-900/80" />
 
-                    <div className="fixed w-full max-w-xs p-6 text-base font-semibold text-gray-900 bg-white rounded-lg shadow-lg top-4 right-4 dark:bg-gray-800 dark:text-gray-400 dark:highlight-white/5">
+                    <div className="dark:highlight-white/5 fixed top-4 right-4 w-full max-w-xs rounded-lg bg-white p-6 text-base font-semibold text-gray-900 shadow-lg dark:bg-gray-800 dark:text-gray-400">
                         <button
                             onClick={() => setIsOpen(false)}
-                            className="absolute flex items-center justify-center w-8 h-8 text-gray-500 top-5 right-5 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"
+                            className="absolute top-5 right-5 flex h-8 w-8 items-center justify-center text-gray-500 hover:text-gray-600 dark:text-gray-400 dark:hover:text-gray-300"
                         >
                             <span className="sr-only">Close navigation</span>
                             <svg
                                 viewBox="0 0 10 10"
-                                className="w-2.5 h-2.5 overflow-visible"
+                                className="h-2.5 w-2.5 overflow-visible"
                                 aria-hidden="true"
                             >
                                 <path
@@ -278,11 +278,11 @@ const NavMenu = () => {
                                 </NextLink>
                             </li> */}
                         </ul>
-                        <div className="pt-6 mt-6 border-t border-gray-200 dark:border-gray-200/10">
+                        <div className="mt-6 border-t border-gray-200 pt-6 dark:border-gray-200/10">
                             <button
                                 aria-label="Toggle Dark Mode"
                                 type="button"
-                                className="flex items-center justify-center w-full py-3 bg-gray-200 rounded-full dark:bg-midnight-hover general-ring-state"
+                                className="general-ring-state flex w-full items-center justify-center rounded-full bg-gray-200 py-3 dark:bg-midnight-hover"
                                 onClick={() =>
                                     setTheme(
                                         resolvedTheme === "dark"
@@ -296,7 +296,7 @@ const NavMenu = () => {
                                         <div>
                                             {resolvedTheme === "dark" ? (
                                                 <svg
-                                                    className="w-7 h-7"
+                                                    className="h-7 w-7"
                                                     fill="none"
                                                     viewBox="0 0 24 24"
                                                 >
@@ -368,7 +368,7 @@ const NavMenu = () => {
                                                 </svg>
                                             ) : (
                                                 <svg
-                                                    className="w-7 h-7"
+                                                    className="h-7 w-7"
                                                     fill="none"
                                                     viewBox="0 0 24 24"
                                                 >
