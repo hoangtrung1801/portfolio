@@ -84,6 +84,7 @@ const About = () => {
                         Technologies and tools I'm currently exploring and
                         intersted about <a href="https://reactjs.org">React</a>,{" "}
                         <a href="https://nextjs.org/">Next.js</a>,{" "}
+                        <a href="https://tailwindcss.com">TailwindCSS</a>,{" "}
                         <a href="https://www.typescriptlang.org/">Typescript</a>
                         , <a href="https://nodejs.org/">Nodejs</a>,{" "}
                         <a href="https://expressjs.com/">Expressjs</a>{" "}
@@ -99,8 +100,8 @@ const About = () => {
                         {". "} You also can connect with me through{" "}
                         <a href="https://www.facebook.com/trung181">Facebook</a>{" "}
                         or{" "}
-                        <a href="https://www.instagram.com/hoangtrung1801/">
-                            Instagram
+                        <a href="https://www.linkedin.com/in/hoangtrung1801">
+                            Linkedin
                         </a>
                         .
                     </p>

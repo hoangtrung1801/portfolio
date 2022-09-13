@@ -6,14 +6,17 @@ import { Form, ContactSize, Subscribers } from "lib/types";
 // import { fetcher } from "@/lib/fetcher";
 // import { useSubscribeToNewsletter } from "@/lib/hooks/useSubscribeToNewsletter";
 import siteMetadata from "data/siteMetadata";
-import React from "react";
+import React, { useEffect } from "react";
+import { Bell } from "phosphor-react";
+import { classNames } from "react-notion";
+import useCopyToClipboard from "@/hooks/useClipToClipboard";
 
 function ContactCard({}) {
     return (
         <div className="my-4 w-full rounded-lg border border-gray-200 bg-[#F8FAFC] p-6 dark:border-gray-700 dark:bg-midnight">
             <h3 className="mt-2 flex items-center font-bold text-gray-900 dark:text-gray-100 md:text-2xl">
                 Get in touch!
-                <span>
+                {/* <span>
                     <svg
                         className="ml-1 h-6 w-6 md:h-7 md:w-7"
                         fill="none"
@@ -34,16 +37,16 @@ function ContactCard({}) {
                             d="M9 16.75C9 16.75 9 19.25 12 19.25C15 19.25 15 16.75 15 16.75"
                         ></path>
                     </svg>
-                </span>
+                </span> */}
+                <Bell weight="fill" className="ml-2 text-yellow-300" />
             </h3>
 
             <p className="mb-0">
-                Want to connect with me or collaborate on projects together, You
-                can send me your email and I{"'"}ll reply as soon as I can...
-                Thank You.
+                If you are interested in working with me just drop me a short
+                mail at <MyEmail />
             </p>
 
-            <form
+            {/* <form
                 className="relative my-4 space-y-4 md:flex md:space-y-0"
                 // onSubmit={handleSubscribe}
             >
@@ -61,11 +64,11 @@ function ContactCard({}) {
                 >
                     Submit
                 </button>
-            </form>
-            <p>
+            </form> */}
+            {/* <p>
                 <span className="text-gray text-sm">or </span>
                 <span className="my-email">{siteMetadata.email}</span>
-            </p>
+            </p> */}
         </div>
     );
 }
@@ -77,6 +80,11 @@ function InlineContact({}) {
                 Get in touch!
             </h3>
             <p className="mt-4 text-base ">
+                If you are interested in working with me just drop me a short
+                mail at <MyEmail />
+            </p>
+
+            {/* <p className="mt-4 text-base ">
                 You can send me your email and I{"'"}ll reply as soon as I can.
             </p>
             <form className="relative my-4 flex space-y-0">
@@ -101,11 +109,26 @@ function InlineContact({}) {
             <p>
                 <span className="text-gray text-sm">or </span>
                 <span className="my-email">{siteMetadata.email}</span>
-            </p>
+            </p> */}
         </div>
     );
 }
 
+function MyEmail({}) {
+    const [copiedText, copy] = useCopyToClipboard();
+
+    return (
+        <a
+            href={`mailto:${siteMetadata.email}`}
+            className={`my-email cursor-pointer select-none
+            ${copiedText === siteMetadata.email && "decoration-teal-500"}
+            `}
+            onClick={() => copy(siteMetadata.email)}
+        >
+            {siteMetadata.email}
+        </a>
+    );
+}
 interface ContactProps {
     size: ContactSize;
 }

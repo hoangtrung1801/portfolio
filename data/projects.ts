@@ -23,9 +23,9 @@ const projects: ProjectType[] = [
         description:
             "This website is an ecommerce website that combines fundraising and environmental selling.",
         githubLink: "https://github.com/hoangtrung1801/bwd2022",
-        link: "https://bwd2022.vercel.app",
+        link: "https://bwd-2022.vercel.app",
         imageUrl:
-            "https://res.cloudinary.com/hoangtrung1801/image/upload/v1657786568/portfolio/project-fundraising-selling-website_qvtoao.png"
+            "https://res.cloudinary.com/hoangtrung1801/image/upload/v1663057954/portfolio/project-fundraising-selling-website_qvtoao.png"
     },
     {
         title: "Food Enjoy",
