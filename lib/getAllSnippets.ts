@@ -1,12 +1,8 @@
-const NOTION_API_DATABASE_URL = "https://notion-api.splitbee.io/v1/table/";
+const NOTION_API_DATABASE_URL = "https://notion-api.splitbee.io/v1/table";
 
 const getAllSnippets = async () => {
-    const url = NOTION_API_DATABASE_URL + "38e89b1f15244ae89ade1ce56cab2f32";
-    const response = await fetch(url, {
-        headers: {
-            Authorization: `Bearer ${process.env.NOTION_TOKEN_V2}`
-        }
-    });
+    const url = `${NOTION_API_DATABASE_URL}/${process.env.NOTION_SNIPPETS_DATABASE_ID}`;
+    const response = await fetch(url);
     const snippets = await response.json();
     return snippets;
 };

@@ -19,7 +19,6 @@ const convertToSnippetList = async (
                 page_id: page.id,
                 property_id: propertyId
             });
-            console.log("property response", propertyResponse);
         });
         // notion.pages.properties.retrieve({
         //     page_id: page.id,

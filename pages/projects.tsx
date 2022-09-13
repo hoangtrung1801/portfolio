@@ -1,5 +1,5 @@
 import Container from "layouts/Container";
-import React from "react";
+import React, { Fragment } from "react";
 import Image from "next/image";
 import projects from "@/data/projects";
 import { LinkSimple, GithubLogo } from "phosphor-react";
@@ -18,7 +18,7 @@ const Projects = () => {
             </h1>
             <div className="grid grid-cols-1 gap-x-12 gap-y-4 md:grid-cols-3 md:gap-y-24">
                 {projects.map((project) => (
-                    <>
+                    <Fragment key={project.title}>
                         <div className="col-span-1 py-2">
                             <h2 className="mt-0">{project.title}</h2>
                             <p>{project.description}</p>
@@ -78,7 +78,7 @@ const Projects = () => {
                                 </div>
                             </div>
                         </div>
-                    </>
+                    </Fragment>
                 ))}
 
                 <a
