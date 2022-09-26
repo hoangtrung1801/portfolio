@@ -50,7 +50,8 @@ export const getStaticProps: GetStaticProps = async ({ params: { slug } }) => {
     const snippetPage = await getSnippetPage(snippet.id);
 
     return {
-        props: { snippet, snippetPage }
+        props: { snippet, snippetPage },
+        revalidate: 43200
     };
 };
 

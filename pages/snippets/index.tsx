@@ -15,26 +15,37 @@ const Snippets = ({ snippets }) => {
                 </span>
             </h1>
             <div className="grid grid-cols-1 gap-4 prose-headings:m-0 prose-p:mb-2 sm:grid-cols-2 lg:grid-cols-3">
-                {snippets.map((snippet) => (
-                    <Link key={snippet.Slug} href={`/snippets/${snippet.Slug}`}>
-                        <div className="group flex h-44 w-full transform cursor-pointer flex-col rounded-lg border border-gray-100 p-4 shadow transition-all hover:scale-105 hover:shadow-lg dark:border-gray-500">
-                            <h3>{snippet.Name}</h3>
-                            <p>{snippet.Description}</p>
-                            <div className="mt-auto flex flex-wrap space-x-2">
-                                {snippet.Tags.map((tag) => (
-                                    <div
-                                        key={`${snippet.slug}/tag`}
-                                        className="duration-400 rounded-lg border border-teal-500 px-2 text-teal-500 transition-all hover:bg-teal-500 hover:text-white"
-                                    >
-                                        <span className="font-headings text-sm uppercase ">
-                                            {tag}
-                                        </span>
-                                    </div>
-                                ))}
+                {!!snippets &&
+                    snippets.map((snippet) => (
+                        <Link
+                            key={snippet.Slug}
+                            href={`/snippets/${snippet.Slug}`}
+                        >
+                            <div className="group flex h-44 w-full transform cursor-pointer flex-col rounded-lg border border-gray-100 p-4 shadow transition-all hover:scale-105 hover:shadow-lg dark:border-gray-500">
+                                <h4 className="h-14">{snippet.Name}</h4>
+                                <p className="text-sm text-gray-500 line-clamp-2">
+                                    {snippet.Description} Lorem, ipsum dolor sit
+                                    amet consectetur adipisicing elit. Ut
+                                    reprehenderit sapiente, in nemo nam at
+                                    praesentium porro, temporibus sed tempore
+                                    incidunt rem eos id neque non assumenda
+                                    sequi impedit consectetur!
+                                </p>
+                                <div className="mt-auto flex flex-wrap space-x-2">
+                                    {snippet.Tags.map((tag) => (
+                                        <div
+                                            key={`${snippet.slug}/tag`}
+                                            className="duration-400 rounded-lg border border-teal-500 px-2 text-teal-500 transition-all hover:bg-teal-500 hover:text-white"
+                                        >
+                                            <span className="font-headings text-sm uppercase ">
+                                                {tag}
+                                            </span>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
-                        </div>
-                    </Link>
-                ))}
+                        </Link>
+                    ))}
             </div>
         </Container>
     );
@@ -45,7 +56,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
 
     return {
         props: { snippets },
-        revalidate: 60 * 60 * 12
+        revalidate: 43200
     };
 };
 
