@@ -91,16 +91,16 @@ const About = () => {
                     </p>
                     <p>
                         You can find me on{" "}
-                        <a href={"https://github.com/hoangtrung1801"}>Github</a>{" "}
+                        <a href={siteMetadata.github}>Github</a>{" "}
                         where I share tech-related tidbits and build in public .
                         I often write about my findings on my{" "}
                         <Link href="/blog">
                             <a>blog</a>
                         </Link>
                         {". "} You also can connect with me through{" "}
-                        <a href="https://www.facebook.com/trung181">Facebook</a>{" "}
+                        <a href={siteMetadata.facebook}>Facebook</a>{" "}
                         or{" "}
-                        <a href="https://www.linkedin.com/in/hoangtrung1801">
+                        <a href={siteMetadata.linkedin}>
                             Linkedin
                         </a>
                         .
