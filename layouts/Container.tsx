@@ -21,7 +21,7 @@ const Container: React.FC<ContainerProps> = ({
 
     return (
         <div
-            className={`min-h-screen bg-white dark:bg-dark ${
+            className={`min-h-screen bg-slate-100 dark:bg-dark ${
                 showCircles && "overflow-hidden"
             }`}
         >
@@ -45,9 +45,9 @@ const Container: React.FC<ContainerProps> = ({
             </Head>
             <NavMenu />
             <main
-                className={`prose prose-lg relative mx-auto flex max-w-6xl flex-col justify-center bg-white px-4 dark:prose-dark dark:bg-dark`}
+                className={`prose prose-lg relative mx-auto flex max-w-6xl flex-col justify-center bg-slate-100 px-4 dark:prose-dark dark:bg-dark`}
             >
-                {showCircles && (
+                {/* {showCircles && (
                     <div className="absolute top-0 left-0 right-0">
                         <div className="absolute top-0 left-16 overflow-visible opacity-50 dark:opacity-30">
                             <div className="circle-obj absolute h-[900px] w-[700px] rounded-[40rem] mix-blend-multiply"></div>
@@ -57,7 +57,7 @@ const Container: React.FC<ContainerProps> = ({
                             <div className="circle-obj2 absolute h-[600px] w-[600px] rounded-[40rem] mix-blend-multiply"></div>
                         </div>
                     </div>
-                )}
+                )} */}
                 <div className="z-10">
                     <PageTransition>{children}</PageTransition>
                 </div>

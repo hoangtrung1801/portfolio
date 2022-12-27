@@ -11,7 +11,7 @@
 .circle-obj {
   background: radial-gradient(
     closest-side,
-    rgba(45, 212, 191, 1),
+    rgba(195, 132, 82, 1),
     rgba(233, 168, 2, 0)
   );
   animation: traverse-up-left 10s ease-in-out infinite alternate;
@@ -21,7 +21,7 @@
 .circle-obj2 {
   background: radial-gradient(
     closest-side,
-    rgba(99, 102, 241, 1),
+    rgba(227, 192, 153, 1),
     rgba(233, 168, 2, 0)
   );
   animation: traverse-up-right 12s ease-in-out infinite alternate;

@@ -23,7 +23,7 @@ module.exports = {
                 orange: colors.orange,
                 blueGray: colors.slate,
                 coolGray: colors.gray,
-                teal: colors.teal,
+                teal: colors.blue,
                 dark: "#111827",
                 darker: "#0d131f",
                 midnight: "#1e293b",
