@@ -64,7 +64,7 @@ const Projects = () => {
                         </div>
                         <div className="col-span-2 mb-16 md:mb-0">
                             <div className="grid grid-cols-1 gap-4 md:grid-cols-5">
-                                <div className="relative col-span-5 h-auto overflow-hidden rounded-lg md:h-[450px]">
+                                <div className="relative col-span-5 h-auto overflow-hidden rounded-lg border border-slate-300 dark:border-slate-600 md:h-[450px]">
                                     <Image
                                         objectFit="cover"
                                         src={project.imageUrl}

@@ -6,24 +6,32 @@ const projects: ProjectType[] = [
         description:
             "This is a website I made to display my background, skills, and projects.",
         githubLink: "https://github.com/hoangtrung1801/portfolio",
-        link: "https://portfolio-hoangtrung1801.vercel.app/",
+        link: "https://hoangtrung1801.tech",
         imageUrl:
-            "https://res.cloudinary.com/hoangtrung1801/image/upload/v1658912721/portfolio/project-portfolio.png"
+            "https://res.cloudinary.com/hoangtrung1801/image/upload/v1672114660/portfolio/project-portfolio-2.png"
     },
+    // {
+    //     title: "Croma Hospital API",
+    //     description:
+    //         "This project was created to provide an API for the website of the online hospital system. It offers a way to properly monitor patients, deliver medications,...  ",
+    //     githubLink: "https://github.com/hoangtrung1801/croma-hospital-api",
+    //     imageUrl:
+    //         "https://res.cloudinary.com/hoangtrung1801/image/upload/v1657786158/portfolio/project-cromahospital.png"
+    // },
     {
-        title: "Croma Hospital API",
+        title: "RecipeHub",
         description:
-            "This project was created to provide an API for the website of the online hospital system. It offers a way to properly monitor patients, deliver medications,...  ",
-        githubLink: "https://github.com/hoangtrung1801/croma-hospital-api",
+            "Platform which people share their own recieps to everyone",
+        githubLink: "https://github.com/hoangtrung1801/recipe-hub",
         imageUrl:
-            "https://res.cloudinary.com/hoangtrung1801/image/upload/v1657786158/portfolio/project-cromahospital.png"
+            "https://res.cloudinary.com/hoangtrung1801/image/upload/v1672115016/portfolio/project-recipehub.png"
     },
     {
         title: "LAVIE - Fundraising Selling Website",
         description:
             "This website is an ecommerce website that combines fundraising and environmental selling.",
         githubLink: "https://github.com/hoangtrung1801/bwd2022",
-        link: "https://bwd-2022.vercel.app",
+        // link: "https://bwd-2022.vercel.app",
         imageUrl:
             "https://res.cloudinary.com/hoangtrung1801/image/upload/v1663057954/portfolio/project-fundraising-selling-website_qvtoao.png"
     },
