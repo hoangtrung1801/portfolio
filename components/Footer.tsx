@@ -220,7 +220,14 @@ const Footer = () => {
                                 <div role="list" className="mt-4 space-y-4">
                                     {navigation.extra.map((item) => (
                                         <Link key={item.name} href={item.href}>
-                                            <a className="block text-base text-gray-600 no-underline hover:text-gray-800 hover:underline dark:text-gray-400 dark:hover:text-gray-300">
+                                            <a
+                                                className="block text-base text-gray-600 no-underline hover:text-gray-800 hover:underline dark:text-gray-400 dark:hover:text-gray-300"
+                                                data-splitbee-event={
+                                                    item.name === "Resume"
+                                                        ? "View my resume"
+                                                        : undefined
+                                                }
+                                            >
                                                 {item.name}
                                             </a>
                                         </Link>

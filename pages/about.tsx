@@ -91,19 +91,15 @@ const About = () => {
                     </p>
                     <p>
                         You can find me on{" "}
-                        <a href={siteMetadata.github}>Github</a>{" "}
-                        where I share tech-related tidbits and build in public .
-                        I often write about my findings on my{" "}
+                        <a href={siteMetadata.github}>Github</a> where I share
+                        tech-related tidbits and build in public . I often write
+                        about my findings on my{" "}
                         <Link href="/blog">
                             <a>blog</a>
                         </Link>
                         {". "} You also can connect with me through{" "}
-                        <a href={siteMetadata.facebook}>Facebook</a>{" "}
-                        or{" "}
-                        <a href={siteMetadata.linkedin}>
-                            Linkedin
-                        </a>
-                        .
+                        <a href={siteMetadata.facebook}>Facebook</a> or{" "}
+                        <a href={siteMetadata.linkedin}>Linkedin</a>.
                     </p>
                 </div>
             </div>
@@ -113,6 +109,7 @@ const About = () => {
                     href={siteMetadata.resume}
                     target="_blank"
                     rel="noreferrer"
+                    data-splitbee-event="View my resume"
                 >
                     View my resume
                 </a>

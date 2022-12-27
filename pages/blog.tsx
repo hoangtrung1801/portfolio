@@ -99,6 +99,7 @@ const Blog: NextPage<BlogProps> = ({ posts }) => {
                     </p>
                 </div>
             )}
+
             {posts && <ArticleList articles={selectedPosts} />}
         </Container>
     );

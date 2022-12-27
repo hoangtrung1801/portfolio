@@ -29,6 +29,8 @@ const Projects = () => {
                                         href={project.link}
                                         target="_blank"
                                         rel="noreferrer"
+                                        data-splitbee-event="Project preview"
+                                        data-splitbee-event-slug={project.title}
                                     >
                                         Preview
                                         <LinkSimple
@@ -43,6 +45,8 @@ const Projects = () => {
                                         href={project.githubLink}
                                         target="_blank"
                                         rel="noreferrer"
+                                        data-splitbee-event="Project github"
+                                        data-splitbee-event-slug={project.title}
                                     >
                                         Github
                                         <GithubLogo
@@ -86,6 +90,7 @@ const Projects = () => {
                     href="https://github.com/hoangtrung1801"
                     target="_blank"
                     rel="noreferrer"
+                    data-splitbee-event="View more on github"
                 >
                     View more on github
                     <ArrowRight className="ml-2 inline" />
